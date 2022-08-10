@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import { AppBar, Toolbar, Box } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Typography} from '@mui/material';
+
+import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 
 
 export const Logo = styled((props: any) => {
-  const { variant, ...other } = props;
+  const { variant, onSidebarOpen, ...other } = props;
 
   const color = variant === 'light' ? '#C1C4D6' : '#5048E5';
 
@@ -13,8 +15,19 @@ export const Logo = styled((props: any) => {
 
     <AppBar position="static">
     <Toolbar>
-      GETBUBB
+      <Typography>Change Me</Typography>
         
+      <IconButton
+            onClick={onSidebarOpen}
+            sx={{
+              display: {
+                xs: 'inline-flex',
+                lg: 'none'
+              }
+            }}
+          >
+            <DoubleArrowIcon fontSize="small" />
+          </IconButton>
     </Toolbar>
 </AppBar>
   );
