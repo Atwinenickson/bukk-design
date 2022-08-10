@@ -1,7 +1,10 @@
 import { useEffect } from 'react';
+import NextLink from 'next/link';
+
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { Box, Drawer, Divider, useMediaQuery } from '@mui/material';
+
 
 
 
@@ -16,6 +19,7 @@ import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 import { NavItem } from './nav-item';
+import { Logo } from './logo';
 
 
 const items = [
@@ -101,6 +105,23 @@ const items = [
             height: '100%'
           }}
         >
+
+
+<Box sx={{ p: 3 }}>
+            <NextLink
+              href="/"
+              passHref
+            >
+              <a>
+                <Logo
+                  sx={{
+                    height: 42,
+                    width: 42
+                  }}
+                />
+              </a>
+            </NextLink>
+          </Box>
 
 
 <Divider
