@@ -1,15 +1,33 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from 'next/head';
+import { Box, Container, Grid } from '@mui/material';
 import { DashboardLayout } from '../components/dashboard-layout'
-import styles from '../styles/Home.module.css'
 
-const Home: NextPage = () => {
-  return (
-    <div className={styles.container}>
-     <DashboardLayout/>
-    </div>
-  )
-}
 
-export default Home
+
+const Dashboard = () => (
+  <>
+    <Head>
+      <title>
+        Dashboard | GETBUKK
+      </title>
+    </Head>
+    <Box
+      component="main"
+      sx={{
+        flexGrow: 1,
+        py: 8
+      }}
+    >
+      <Container maxWidth={false}>DASHBOARD
+      </Container>
+    </Box>
+  </>
+);
+
+Dashboard.getLayout = (page: any) => (
+  <DashboardLayout>
+    {page}
+  </DashboardLayout>
+);
+
+export default Dashboard;
