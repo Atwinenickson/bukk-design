@@ -101,6 +101,16 @@ const items = [
             height: '100%'
           }}
         >
+
+
+<Divider
+          sx={{
+            borderColor: '#2D3748',
+            my: 3
+          }}
+        />
+
+        
           <Box sx={{ flexGrow: 1 }}>
             {items.map((item) => (
               <NavItem
