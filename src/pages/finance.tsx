@@ -2,12 +2,13 @@ import Head from 'next/head';
 import { Box, Container, Grid } from '@mui/material';
 
 import { DashboardLayout } from '../components/dashboard-layout';
+import { CardComponent } from '../components/card/card';
 
 const Finance = () => (
   <>
     <Head>
       <title>
-        Dashboard | Material Kit
+        Dashboard
       </title>
     </Head>
     <Box
@@ -29,7 +30,7 @@ const Finance = () => (
             xl={3}
             xs={12}
           >
-            <Budget />
+          < CardComponent/>
           </Grid>
           <Grid
             item
@@ -38,7 +39,7 @@ const Finance = () => (
             sm={6}
             xs={12}
           >
-            <TotalCustomers />
+          < CardComponent/>
           </Grid>
           <Grid
             item
@@ -47,7 +48,7 @@ const Finance = () => (
             sm={6}
             xs={12}
           >
-            <TasksProgress />
+            < CardComponent/>
           </Grid>
           <Grid
             item
@@ -56,7 +57,7 @@ const Finance = () => (
             sm={6}
             xs={12}
           >
-            <TotalProfit sx={{ height: '100%' }} />
+             < CardComponent/>
           </Grid>
           <Grid
             item
@@ -65,7 +66,7 @@ const Finance = () => (
             xl={9}
             xs={12}
           >
-            <Sales />
+            < CardComponent/>
           </Grid>
           <Grid
             item
@@ -74,7 +75,7 @@ const Finance = () => (
             xl={3}
             xs={12}
           >
-            <TrafficByDevice sx={{ height: '100%' }} />
+            < CardComponent/>
           </Grid>
           <Grid
             item
@@ -83,7 +84,7 @@ const Finance = () => (
             xl={3}
             xs={12}
           >
-            <LatestProducts sx={{ height: '100%' }} />
+            < CardComponent/>
           </Grid>
           <Grid
             item
