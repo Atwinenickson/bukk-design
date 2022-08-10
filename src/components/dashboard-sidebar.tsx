@@ -110,7 +110,9 @@ const items = [
         >
 
 
-<Box sx={{ p: 3 }}>
+<Box sx={{ p: 3 }}
+
+>
             <NextLink
               href="/"
               passHref
@@ -126,8 +128,8 @@ const items = [
             </NextLink>
 
 
-            <Toolbar>
-        <div>
+          
+        <Box sx={{ flexGrow: 1 }}>
       <IconButton
             onClick={onClose}
             sx={{
@@ -140,8 +142,7 @@ const items = [
           >
             <DoubleArrowIcon fontSize="small" />
           </IconButton>
-          </div>
-    </Toolbar>
+          </Box>
          
           </Box>
 
