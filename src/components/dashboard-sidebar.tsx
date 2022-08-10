@@ -100,6 +100,7 @@ const items = [
       <>
         <Box
           sx={{
+            backgroundColor: '#120E1F',
             display: 'flex',
             flexDirection: 'column',
             height: '100%'
