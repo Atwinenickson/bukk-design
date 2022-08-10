@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import { Box, Drawer, Divider, useMediaQuery  } from '@mui/material';
+import { Box, Drawer, Divider, useMediaQuery, Toolbar, IconButton, Typography  } from '@mui/material';
 
 
 
@@ -18,7 +18,7 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
-
+import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 
 import { NavItem } from './nav-item';
 import { Logo } from './logo';
@@ -77,7 +77,7 @@ const items = [
 
 
   export const DashboardSidebar = (props: any) => {
-    const { open, onClose } = props;
+    const { open, onClose, ...other  } = props;
     const router = useRouter();
     const lgUp = useMediaQuery((theme: any) => theme.breakpoints.up('lg'), {
       defaultMatches: true,
@@ -126,6 +126,22 @@ const items = [
             </NextLink>
 
 
+            <Toolbar>
+        <div>
+      <IconButton
+            onClick={onClose}
+            sx={{
+              display: {
+                xs: 'none',
+                lg: 'inline-flex'
+              },
+              color: 'white'
+            }}
+          >
+            <DoubleArrowIcon fontSize="small" />
+          </IconButton>
+          </div>
+    </Toolbar>
          
           </Box>
 

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import { Toolbar, IconButton, Typography} from '@mui/material';
+import { Toolbar, IconButton, Typography, Box} from '@mui/material';
 
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 
@@ -13,21 +13,9 @@ export const Logo = styled((props: any) => {
 
   return (
 
-    <Toolbar>
-      {/* <Typography>Change Me</Typography> */}
-        
-      <IconButton
-            onClick={onSidebarOpen}
-            sx={{
-              display: {
-                xs: 'inline-flex',
-                lg: 'none'
-              }
-            }}
-          >
-            <DoubleArrowIcon fontSize="small" />
-          </IconButton>
-    </Toolbar>
+        <Box>
+        <Typography>Change Me</Typography>
+        </Box>
   );
 })``;
 
@@ -38,3 +26,6 @@ export const Logo = styled((props: any) => {
 // Logo.propTypes = {
 //   variant: PropTypes.oneOf(['light', 'primary'])
 // };
+
+
+
