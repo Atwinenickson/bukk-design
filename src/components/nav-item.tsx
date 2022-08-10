@@ -3,10 +3,12 @@ import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { Box, Button, ListItem } from '@mui/material';
 
+
+
 export const NavItem = (props: any) => {
   const { href, icon, title, ...others } = props;
   const router = useRouter();
-  const active = href ? (router.pathname === href) : false;
+  const active:any = href ? (router.pathname === href) : false;
 
   return (
     <ListItem
