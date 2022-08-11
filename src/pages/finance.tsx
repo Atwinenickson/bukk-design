@@ -26,77 +26,21 @@ const Finance = () => (
         >
           <Grid
             item
-            lg={3}
-            sm={6}
-            xl={3}
-            xs={12}
+            xs={3}
           >
           < CardComponent/>
           </Grid>
           <Grid
             item
-            xl={3}
-            lg={3}
-            sm={6}
-            xs={12}
+            xs={5}
           >
           < CardComponent/>
           </Grid>
           <Grid
             item
-            xl={3}
-            lg={3}
-            sm={6}
-            xs={12}
+            xs={4}
           >
             < CardComponent/>
-          </Grid>
-          <Grid
-            item
-            xl={3}
-            lg={3}
-            sm={6}
-            xs={12}
-          >
-             < CardComponent/>
-          </Grid>
-          <Grid
-            item
-            lg={8}
-            md={12}
-            xl={9}
-            xs={12}
-          >
-            < CardComponent/>
-          </Grid>
-          <Grid
-            item
-            lg={4}
-            md={6}
-            xl={3}
-            xs={12}
-          >
-            < CardComponent/>
-          </Grid>
-          <Grid
-            item
-            lg={4}
-            md={6}
-            xl={3}
-            xs={12}
-          >
-            < CardComponent/>
-          </Grid>
-          <Grid
-            item
-            lg={8}
-            md={12}
-            xl={9}
-            xs={12}
-          >
-           <div>
-            Hello
-           </div>
           </Grid>
         </Grid>
       </Container>

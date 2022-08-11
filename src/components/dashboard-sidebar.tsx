@@ -178,7 +178,7 @@ const items = [
             sx: {
               backgroundColor: 'neutral.900',
               color: '#FFFFFF',
-              width: 280
+              width: 200
             }
           }}
           variant="permanent"
@@ -197,7 +197,7 @@ const items = [
           sx: {
             backgroundColor: 'neutral.900',
             color: '#FFFFFF',
-            width: 280
+            width: 200
           }
         }}
         sx={{ zIndex: (theme) => theme.zIndex.appBar + 100 }}

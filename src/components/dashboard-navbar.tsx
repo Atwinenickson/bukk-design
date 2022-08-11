@@ -1,6 +1,6 @@
 import PropTypes  from "prop-types";
 import styled from '@emotion/styled'
-import { AppBar, Toolbar,  Avatar, Badge,Typography, Box, Container,  Tooltip, IconButton  } from "@mui/material";
+import { AppBar, Toolbar, Badge,Typography, Box, Container,  Tooltip, IconButton  } from "@mui/material";
 
 import SearchIcon from '@mui/icons-material/Search';
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
@@ -22,10 +22,10 @@ return (
     <RootDashboardNavbar
     sx={{
         left: {
-          lg: 280
+          lg: 200
         },
         width: {
-          lg: 'calc(100% - 280px)'
+          lg: 'calc(100% - 200px)'
         }
       }}
       {...other}
