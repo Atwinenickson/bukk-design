@@ -1,37 +1,27 @@
 import {
-    Box,
-    Card,
-    CardContent,
-     Typography
+    Box,     BoxProps 
   } from '@mui/material';
+
   
   export const CardComponent = (props: any) => (
-    <Box {...props}>
-      <Box
+    <div style={{ width: '100%' }}>
+  <Box
         sx={{
-          alignItems: 'center',
           display: 'flex',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          m: -1
+          alignItems: 'flex-start',
+          flexDirection: 'column',
+          p: 1,
+          m: 1,
+          bgcolor: 'background.paper',
+          borderRadius: 1,
         }}
       >
-        <Typography
-          sx={{ m: 1 }}
-          variant="h4"
-        >
-          Card
-        </Typography>
-       
+        <Box>Item 1</Box>
+        <Box>Item 2</Box>
+        <Box>Item 3</Box>
+        <Box>Item 4</Box>
+        <Box>Item 5</Box>
       </Box>
-      <Box sx={{ mt: 3 }}>
-        <Card>
-          <CardContent>
-            <Box sx={{ maxWidth: 500 }}>
-           <p>Hello</p>
-            </Box>
-          </CardContent>
-        </Card>
-      </Box>
-    </Box>
+ </div>
+        
   );
