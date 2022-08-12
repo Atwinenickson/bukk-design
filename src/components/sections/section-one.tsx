@@ -21,7 +21,7 @@ export const SectionOneComponent = (props: any) => (
         alignItems: 'center',
         p: 1,
         m: 1,
-        bgcolor: 'blue',
+        bgcolor: '#283593',
         width: '90%',
         height: '14%',
       }}
@@ -38,7 +38,7 @@ export const SectionOneComponent = (props: any) => (
         alignItems: 'center',
         p: 1,
         m: 1,
-        bgcolor: 'blue',
+        bgcolor: '#283593',
         width: '90%',
         height: '24%',
       }}
@@ -55,7 +55,7 @@ export const SectionOneComponent = (props: any) => (
         alignItems: 'center',
         p: 1,
         m: 1,
-        bgcolor: 'blue',
+        bgcolor: '#283593',
         width: '90%',
         height: '24%',
       }}
@@ -87,7 +87,7 @@ export const SectionOneComponent = (props: any) => (
         alignItems: 'center',
         p: 1,
         m: 1,
-        bgcolor: 'blue',
+        bgcolor: '#283593',
         width: '90%',
         height: '24%',
       }}
@@ -121,7 +121,7 @@ export const SectionOneComponent = (props: any) => (
         alignItems: 'center',
         p: 1,
         m: 1,
-        bgcolor: 'blue',
+        bgcolor: '#283593',
         width: '90%',
         height: '14%',
       }}
