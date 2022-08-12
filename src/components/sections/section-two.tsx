@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react'
 import {
   Box, Typography, Button, Container, Stack, Divider
 } from '@mui/material';
@@ -6,9 +7,22 @@ import WorkIcon from '@mui/icons-material/Work';
 import DirectionsBusFilledIcon from '@mui/icons-material/DirectionsBusFilled';
 import PersonIcon from '@mui/icons-material/Person';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { DriverWalletsListResults } from '../tables/driver-wallets';
+import { useSelector, useDispatch } from 'react-redux'
+import { getwallets, getWalletValues } from '../../slices/driverwalletsSlice';
 
 
-export const SectionTwoComponent = (props: any) => (
+export const SectionTwoComponent = (props: any) => {
+
+
+  const wallets = useSelector(getWalletValues)
+  const dispatch = useDispatch();
+  
+  useEffect(() => {
+      dispatch(getwallets())    
+  }, [])
+
+return (
     <Container
       sx={{
         display: 'flex-col',
@@ -254,8 +268,10 @@ export const SectionTwoComponent = (props: any) => (
             }}>See all <ArrowForwardIosIcon sx={{fontSize:8}}/>  </Typography>
           </Box>
         </Stack>
+
+        <DriverWalletsListResults driverwallets={wallets}/>
       </Box>
 
     </Container>
 
-);
+)};

@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head';
 import { Box, Container, Grid, Typography } from '@mui/material';
 
@@ -6,7 +7,21 @@ import { SectionOneComponent } from '../components/sections/section-one';
 import { SectionTwoComponent } from '../components/sections/section-two';
 import { SectionThreeComponent } from '../components/sections/section-three';
 
-const Finance = () => (
+import { useSelector, useDispatch } from 'react-redux'
+import {getwallets, getWalletValues} from '../slices/driverwalletsSlice'
+
+
+const Finance = () => {
+
+const wallets = useSelector(getWalletValues)
+const dispatch = useDispatch();
+
+useEffect(() => {
+    dispatch(getwallets())    
+}, [])
+
+return (
+
   <>
     <Head>
       <title>
@@ -34,6 +49,14 @@ const Finance = () => (
         textAlign: "center"
       }}>Finance Panel</Typography>
       </Box>
+
+      <div>
+      <ol>
+        {wallets.map((wallet) => (
+          <li>{wallet.name}</li>
+        ))}
+      </ol>
+      </div>
         
       <Container maxWidth={false}>
         <Grid
@@ -65,7 +88,7 @@ const Finance = () => (
       </Container>
     </Box>
   </>
-);
+)};
 
 Finance.getLayout = (page: any) => (
   <DashboardLayout>

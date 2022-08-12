@@ -9,11 +9,12 @@ import {
   TableRow,
   Typography
 } from '@mui/material';
+import { DriverWalletState } from '../../slices/driverwalletsSlice';
 
-export const DriverWalletsListResults = ({ driverwallets, ...rest }) => {
+export const DriverWalletsListResults = ({driverwallets}: {driverwallets: DriverWalletState[]}) => {
 
   return (
-    <Card {...rest}>
+    <Card>
         <Box sx={{ minWidth: 1050 }}>
           <Table>
             <TableHead>
@@ -39,10 +40,10 @@ export const DriverWalletsListResults = ({ driverwallets, ...rest }) => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {driverwallets.map((driverwallet: any) => (
+              {driverwallets.map((driverwallet: DriverWalletState) => (
                 <TableRow
                   hover
-                  key={driverwallet.id}
+                  // key={driverwallet.id}
                 >
 
                   <TableCell>
