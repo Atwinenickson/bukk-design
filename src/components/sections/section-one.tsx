@@ -84,7 +84,9 @@ export const SectionOneComponent = (props: any) => (
 
         <Typography variant="h4" sx={{
         color: 'white',
-        textAlign: "center"
+        textAlign: "center",
+        fontSize:22,
+        fontWeight:600
       }}>R. 809K</Typography>
       </Box>
       <Typography variant="subtitle2" sx={{

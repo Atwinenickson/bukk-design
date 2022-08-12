@@ -23,10 +23,18 @@ const Finance = () => (
         height: '100%'
       }}
     >
-           <Typography sx={{
+      <Box  sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          p: 1,
+          m: 1,
+        }}>
+      <Typography sx={{
         color: 'white',
         textAlign: "center"
-      }}>Finance</Typography>
+      }}>Finance Panel</Typography>
+      </Box>
+        
       <Container maxWidth={false}>
         <Grid
           container
