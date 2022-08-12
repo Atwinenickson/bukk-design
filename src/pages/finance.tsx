@@ -35,7 +35,7 @@ const Finance = () => (
             item
             xs={3}
             sx={{
-              backgroundColor: 'red'
+              // backgroundColor: 'red'
             }}
           >
           < SectionOneComponent/>

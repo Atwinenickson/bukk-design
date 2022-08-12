@@ -11,7 +11,7 @@ export const SectionOneComponent = (props: any) => (
       flexDirection: 'column',
       p: 1,
       m: 1,
-      bgcolor: 'background.paper',
+      bgcolor: '#2E2957',
       borderRadius: 1,
     }}
   >
