@@ -13,6 +13,7 @@ export const SectionOneComponent = (props: any) => (
       m: 1,
       bgcolor: '#2E2957',
       borderRadius: 1,
+      flexGrow: 1
     }}
   >
     <Box
@@ -24,12 +25,15 @@ export const SectionOneComponent = (props: any) => (
         bgcolor: '#283593',
         width: '90%',
         height: '14%',
+        flexGrow: 1
       }}
     >
       <Typography sx={{
         flexGrow: 1,
         color: 'white',
-        textAlign: "center"
+        textAlign: "center",
+        fontSize:10,
+        fontWeight:300
       }}>COLLECTIONS</Typography>
     </Box>
     <Box
@@ -41,6 +45,7 @@ export const SectionOneComponent = (props: any) => (
         bgcolor: '#283593',
         width: '90%',
         height: '24%',
+        flexGrow: 1
       }}
     >
       <Typography sx={{
@@ -58,17 +63,23 @@ export const SectionOneComponent = (props: any) => (
         bgcolor: '#283593',
         width: '90%',
         height: '24%',
+        flexGrow: 1
       }}
     >
-      <Box component="div" display="inline"  sx={{
+      <Box component="div" display="flex"  sx={{
         color: 'white',
         textAlign: "center",
-        m:5
-      }}>Profitability</Box>
+        marginLeft:3,
+        paddingBottom:1,
+        // m:5,
+         flexGrow: 1
+      }}>Prrofitability</Box>
       <Box>
       <Typography variant="subtitle2" sx={{
         color: 'white',
-        textAlign: "center"
+        textAlign: "center",
+        fontSize:10,
+        fontWeight:300
       }}>Total Earning Profits</Typography>
 
         <Typography variant="h4" sx={{
@@ -78,7 +89,9 @@ export const SectionOneComponent = (props: any) => (
       </Box>
       <Typography variant="subtitle2" sx={{
         color: 'white',
-        textAlign: "center"
+        textAlign: "center",
+        fontSize:10,
+        fontWeight:300
       }}>{`Margin +50%`}</Typography>
       </Container>
       <Container
@@ -90,11 +103,15 @@ export const SectionOneComponent = (props: any) => (
         bgcolor: '#283593',
         width: '90%',
         height: '24%',
+        flexGrow: 1
       }}
     >
       <Box component="div" display="inline"  sx={{
         color: 'white',
         textAlign: "center",
+        fontSize:10,
+        fontWeight:300,
+        paddingBottom:2
       }}>Maker Checkers</Box>
       <Box>
       <Typography variant="subtitle2" sx={{
@@ -124,12 +141,16 @@ export const SectionOneComponent = (props: any) => (
         bgcolor: '#283593',
         width: '90%',
         height: '14%',
+        flexGrow: 1
       }}
     >
       <Typography  variant="subtitle2" sx={{
         color: 'white',
-        align: "center"
-      }}>COLLECTIONS</Typography>
+        align: "center",
+        fontSize:10,
+        fontWeight:300,
+        paddingBottom:2
+      }}>Payment History</Typography>
       <Button
         variant="outlined"
         sx={{ width: 150, height:30, alignContent:"center", backgroundColor:"yellow", color:"black"}}

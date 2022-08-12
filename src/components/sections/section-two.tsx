@@ -86,7 +86,8 @@ export const SectionTwoComponent = (props: any) => (
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              bgcolor: "#5B4D48"
+              bgcolor: "#5B4D48",
+              flexGrow: 1
             }}
           >
             <Typography variant="subtitle2" sx={{
@@ -179,6 +180,7 @@ export const SectionTwoComponent = (props: any) => (
           alignItems: 'flex-end',
           flexDirection: 'column',
           p: 1,
+          flexGrow: 1
         }}
       >
          <Button
@@ -213,6 +215,7 @@ export const SectionTwoComponent = (props: any) => (
           m: 1,
           // bgcolor: 'background.paper',
           borderRadius: 1,
+          flexGrow: 1
         }}
       >
 
@@ -233,7 +236,8 @@ export const SectionTwoComponent = (props: any) => (
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              bgcolor: "#5B4D48"
+              bgcolor: "#5B4D48",
+              flexGrow: 1
             }}
           >
             <Typography variant="subtitle2" sx={{
