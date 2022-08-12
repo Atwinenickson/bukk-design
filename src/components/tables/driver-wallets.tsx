@@ -1,65 +1,66 @@
 import PropTypes from 'prop-types';
 import {
-  Box,
-  Card,
+  Paper,
   Table,
   TableBody,
   TableCell,
+  TableContainer,
   TableHead,
   TableRow,
   Typography
 } from '@mui/material';
 import { DriverWalletState } from '../../slices/driverwalletsSlice';
 
+
 export const DriverWalletsListResults = ({driverwallets}: {driverwallets: DriverWalletState[]}) => {
 
   return (
-    <Card>
-        <Box sx={{ minWidth: 1050 }}>
-          <Table>
+    <TableContainer sx={{width:'10'}} component={Paper}>
+          <Table size="small" sx={{width:7}} aria-label="Driver Wallets Table">
             <TableHead>
-              <TableRow>
-                <TableCell>
-                  Name
+              <TableRow sx={{backgroundColor:'#283593'}}>
+                <TableCell  size='small' style={{ width: "10%" }}>
+                  <Typography sx={{ fontSize:7, fontWeight:600, color:'white'}}>Name</Typography>
                 </TableCell>
                 <TableCell>
-                  Earnings(R)
+                <Typography sx={{ fontSize:7, fontWeight:600, color:'white'}}>Earnings</Typography>
                 </TableCell>
                 <TableCell>
-                  Trips
+                <Typography sx={{ fontSize:7, fontWeight:600, color:'white'}}>Trips</Typography>
                 </TableCell>
                 <TableCell>
-                  Country
+                <Typography sx={{ fontSize:7, fontWeight:600, color:'white'}}>Country</Typography>
                 </TableCell>
                 <TableCell>
-                  Status
+                <Typography sx={{ fontSize:7, fontWeight:600, color:'white'}}>Status</Typography>
                 </TableCell>
                 <TableCell>
-                  Take Action
+                <Typography sx={{ fontSize:7, fontWeight:600, color:'white'}}>Take Action</Typography>
                 </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {driverwallets.map((driverwallet: DriverWalletState) => (
+              {driverwallets?.map((driverwallet: DriverWalletState) => (
                 <TableRow
                   hover
-                  // key={driverwallet.id}
+                  key={driverwallet.name}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
 
                   <TableCell>
-                        {driverwallet.name}
+                        {driverwallet?.name}
                   </TableCell>
                   <TableCell>
-                    {driverwallet.earnings}
+                    {driverwallet?.earnings}
                   </TableCell>
                   <TableCell>
-                    {driverwallet.trips}
+                    {driverwallet?.trips}
                   </TableCell>
                   <TableCell>
-                    {driverwallet.country}
+                    {driverwallet?.country}
                   </TableCell>
                   <TableCell>
-                    {driverwallet.status}
+                    {driverwallet?.status}
                   </TableCell>
                   <TableCell>
                       <Typography
@@ -73,8 +74,7 @@ export const DriverWalletsListResults = ({driverwallets}: {driverwallets: Driver
               ))}
             </TableBody>
           </Table>
-        </Box>
-    </Card>
+          </TableContainer>
   );
 };
 

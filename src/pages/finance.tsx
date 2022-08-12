@@ -48,16 +48,7 @@ return (
         color: 'white',
         textAlign: "center"
       }}>Finance Panel</Typography>
-      </Box>
-
-      <div>
-      <ol>
-        {wallets.map((wallet) => (
-          <li>{wallet.name}</li>
-        ))}
-      </ol>
-      </div>
-        
+      </Box>  
       <Container maxWidth={false}>
         <Grid
           container
