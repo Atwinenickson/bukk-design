@@ -143,33 +143,7 @@ import {
       }}>R. 108,908.04</Typography>
 </Stack>
       </Box>
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          p: 1,
-          m: 1,
-          bgcolor: 'background.paper',
-          borderRadius: 1,
-        }}
-      >
-        <Typography>Item 1</Typography>
-        <Typography>Item 2</Typography>
-      </Box>
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          p: 1,
-          m: 1,
-          bgcolor: 'background.paper',
-          borderRadius: 1,
-        }}
-      >
-        <Typography>Item 1</Typography>
-        <Typography>Item 2</Typography>
-        <Typography>Item 2</Typography>
-      </Box>
+
         </Container>
       <Container
         sx={{
