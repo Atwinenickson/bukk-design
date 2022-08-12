@@ -4,7 +4,7 @@ import {
 
   
   export const CardComponent = (props: any) => (
-    <div style={{ width: '100%' }}>
+    <div style={{ width: '100%', bgc }}>
   <Box
         sx={{
           display: 'flex',
