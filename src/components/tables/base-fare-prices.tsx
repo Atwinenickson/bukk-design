@@ -1,67 +1,70 @@
 import PropTypes from 'prop-types';
 import {
-  Box,
-  Card,
+  Paper,
   Table,
   TableBody,
   TableCell,
+  TableContainer,
   TableHead,
   TableRow,
+  Typography
 } from '@mui/material';
+import { Busfarestate } from '../../slices/busfareSlice';
 
-export const BaseFareListResults = ({ basefareprices, ...rest }) => {
+
+export const BaseFareListResults = ({basefareprices}: {basefareprices: Busfarestate[]}) => {
 
   return (
-    <Card {...rest}>
-        <Box sx={{ minWidth: 1050 }}>
-          <Table>
+    <TableContainer component={Paper}>
+          <Table size="small" aria-label="Driver Wallets Table">
             <TableHead>
-              <TableRow>
-                <TableCell>
-                  Country
+              <TableRow sx={{backgroundColor:'#283593'}}>
+                <TableCell  size='small'>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Country</Typography>
                 </TableCell>
                 <TableCell>
-                  City
+                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>City</Typography>
                 </TableCell>
                 <TableCell>
-                  %KM
+                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Rate</Typography>
                 </TableCell>
                 <TableCell>
-                  %Discount
+                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Discount</Typography>
                 </TableCell>
                 <TableCell>
-                  Tax
+                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Tax</Typography>
                 </TableCell>
               </TableRow>
             </TableHead>
-            <TableBody>
-              {basefareprices.map((basefareprice: any) => (
+            <TableBody sx={{backgroundColor:'#251A40'}}>
+              {basefareprices?.map((basefareprice: Busfarestate) => (
                 <TableRow
                   hover
-                  key={basefareprice.id}
+                  key={basefareprice.city}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
 
                   <TableCell>
-                        {basefareprice.country}
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}> {basefareprice?.country} </Typography>
+                  </TableCell>
+                 
+                  <TableCell>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {basefareprice?.city}  </Typography>
                   </TableCell>
                   <TableCell>
-                    {basefareprice.city}
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {basefareprice?.rate}  </Typography>
                   </TableCell>
                   <TableCell>
-                    {basefareprice.rate}
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {basefareprice?.discount}  </Typography>
                   </TableCell>
                   <TableCell>
-                    {basefareprice.discount}
-                  </TableCell>
-                  <TableCell>
-                    {basefareprice.tax}
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {basefareprice?.tax}  </Typography>
                   </TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
-        </Box>
-    </Card>
+          </TableContainer>
   );
 };
 

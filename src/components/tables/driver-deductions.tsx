@@ -20,23 +20,23 @@ export const DriverDeductionsListResults = ({driverdeductions}: {driverdeduction
             <TableHead>
               <TableRow sx={{backgroundColor:'#283593'}}>
                 <TableCell  size='small'>
-                  <Typography sx={{width: 2, fontSize:7, fontWeight:600, color:'white'}}>Driver</Typography>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Driver</Typography>
                 </TableCell>
                 <TableCell>
-                <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>Country</Typography>
+                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Country</Typography>
                 </TableCell>
                 <TableCell>
-                <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>City</Typography>
+                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>City</Typography>
                 </TableCell>
                 <TableCell>
-                <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>Earnings</Typography>
+                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Earnings</Typography>
                 </TableCell>
                 <TableCell>
-                <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>Deductions</Typography>
+                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Deductions</Typography>
                 </TableCell>
               </TableRow>
             </TableHead>
-            <TableBody sx={{backgroundColor:'#1565c0'}}>
+            <TableBody sx={{backgroundColor:'#251A40'}}>
               {driverdeductions?.map((driverdeduction: Driverdeductionstate) => (
                 <TableRow
                   hover
@@ -45,17 +45,20 @@ export const DriverDeductionsListResults = ({driverdeductions}: {driverdeduction
                 >
 
                   <TableCell>
-                  <Typography sx={{width: 2, fontSize: 8, fontWeight:600, color:'white'}}> {driverdeduction?.driver} </Typography>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}> {driverdeduction?.driver} </Typography>
                   </TableCell>
                  
                   <TableCell>
-                  <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>  {driverdeduction?.country}  </Typography>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverdeduction?.country}  </Typography>
                   </TableCell>
                   <TableCell>
-                  <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>  {driverdeduction?.city}  </Typography>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverdeduction?.city}  </Typography>
                   </TableCell>
                   <TableCell>
-                  <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>  {driverdeduction?.deductions}  </Typography>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverdeduction?.earnings}  </Typography>
+                  </TableCell>
+                  <TableCell>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverdeduction?.deductions}  </Typography>
                   </TableCell>
                 </TableRow>
               ))}

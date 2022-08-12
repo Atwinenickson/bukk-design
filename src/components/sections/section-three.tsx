@@ -8,16 +8,20 @@ import { DriverDeductionsListResults } from '../tables/driver-deductions';
 
 import { useSelector, useDispatch } from 'react-redux'
 import { getdeductions, getDeductionValues } from '../../slices/driverdeductionsSlice';
+import { BaseFareListResults } from '../tables/base-fare-prices';
+import { getbusfares, getBusFareValues } from '../../slices/busfareSlice';
   
   
   export const SectionThreeComponent = (props: any) => {
 
 
     const driverdeductions = useSelector(getDeductionValues)
+    const basefareprices = useSelector(getBusFareValues)
     const dispatch = useDispatch();
     
     useEffect(() => {
-        dispatch(getdeductions())    
+        dispatch(getdeductions())  
+        dispatch(getbusfares())    
     }, [])
   
   return(
@@ -69,8 +73,7 @@ sx={{
           </Box>
         </Stack>
       </Box>
-
-
+      <BaseFareListResults basefareprices={basefareprices}/>
 
 
       <Box
