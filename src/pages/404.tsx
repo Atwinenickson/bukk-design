@@ -45,7 +45,7 @@ const NotFound = () => (
           <Box sx={{ textAlign: 'center' }}>
             <img
               alt="Under development"
-              src="/static/images/undraw_page_not_found_su7k.svg"
+              src="/static/images/notfound.jpg"
               style={{
                 marginTop: 50,
                 display: 'inline-block',
