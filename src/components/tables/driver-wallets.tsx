@@ -15,31 +15,31 @@ import { DriverWalletState } from '../../slices/driverwalletsSlice';
 export const DriverWalletsListResults = ({driverwallets}: {driverwallets: DriverWalletState[]}) => {
 
   return (
-    <TableContainer sx={{width:'10'}} component={Paper}>
-          <Table size="small" sx={{width:7}} aria-label="Driver Wallets Table">
+    <TableContainer component={Paper}>
+          <Table size="small" aria-label="Driver Wallets Table">
             <TableHead>
               <TableRow sx={{backgroundColor:'#283593'}}>
-                <TableCell  size='small' style={{ width: "10%" }}>
-                  <Typography sx={{ fontSize:7, fontWeight:600, color:'white'}}>Name</Typography>
+                <TableCell  size='small'>
+                  <Typography sx={{width: 2, fontSize:7, fontWeight:600, color:'white'}}>Name</Typography>
                 </TableCell>
                 <TableCell>
-                <Typography sx={{ fontSize:7, fontWeight:600, color:'white'}}>Earnings</Typography>
+                <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>Earnings</Typography>
                 </TableCell>
                 <TableCell>
-                <Typography sx={{ fontSize:7, fontWeight:600, color:'white'}}>Trips</Typography>
+                <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>Trips</Typography>
                 </TableCell>
                 <TableCell>
-                <Typography sx={{ fontSize:7, fontWeight:600, color:'white'}}>Country</Typography>
+                <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>Country</Typography>
                 </TableCell>
                 <TableCell>
-                <Typography sx={{ fontSize:7, fontWeight:600, color:'white'}}>Status</Typography>
+                <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>Status</Typography>
                 </TableCell>
                 <TableCell>
-                <Typography sx={{ fontSize:7, fontWeight:600, color:'white'}}>Take Action</Typography>
+                <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>Take Action</Typography>
                 </TableCell>
               </TableRow>
             </TableHead>
-            <TableBody>
+            <TableBody sx={{backgroundColor:'#1565c0'}}>
               {driverwallets?.map((driverwallet: DriverWalletState) => (
                 <TableRow
                   hover
@@ -48,22 +48,24 @@ export const DriverWalletsListResults = ({driverwallets}: {driverwallets: Driver
                 >
 
                   <TableCell>
-                        {driverwallet?.name}
+                  <Typography sx={{width: 2, fontSize: 8, fontWeight:600, color:'white'}}> {driverwallet?.name} </Typography>
+                  </TableCell>
+                 
+                  <TableCell>
+                  <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>  {driverwallet?.earnings}  </Typography>
                   </TableCell>
                   <TableCell>
-                    {driverwallet?.earnings}
+                  <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>  {driverwallet?.trips}  </Typography>
                   </TableCell>
                   <TableCell>
-                    {driverwallet?.trips}
+                  <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>  {driverwallet?.country}  </Typography>
                   </TableCell>
                   <TableCell>
-                    {driverwallet?.country}
-                  </TableCell>
-                  <TableCell>
-                    {driverwallet?.status}
+                  <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>  {driverwallet?.status}  </Typography>
                   </TableCell>
                   <TableCell>
                       <Typography
+                      sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}
                         color="textPrimary"
                         variant="body1"
                       >
