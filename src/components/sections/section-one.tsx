@@ -3,7 +3,7 @@ import {
 } from '@mui/material';
 
 
-export const CardComponent = (props: any) => (
+export const SectionOneComponent = (props: any) => (
   <Box
     sx={{
       display: 'flex',

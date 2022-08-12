@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { Box, Container, Grid, Typography } from '@mui/material';
 
 import { DashboardLayout } from '../components/dashboard-layout';
-import { CardComponent } from '../components/card/card';
+import { SectionOneComponent } from '../components/sections/section-one';
 
 const Finance = () => (
   <>
@@ -37,7 +37,7 @@ const Finance = () => (
               backgroundColor: 'red'
             }}
           >
-          < CardComponent/>
+          < SectionOneComponent/>
           </Grid>
           <Grid
             item
