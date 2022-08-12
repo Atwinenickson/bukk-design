@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Box, Container, Grid } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 
 import { DashboardLayout } from '../components/dashboard-layout';
 import { CardComponent } from '../components/card/card';
@@ -8,7 +8,7 @@ const Finance = () => (
   <>
     <Head>
       <title>
-        Dashboard
+        Finance
       </title>
     </Head>
     <Box
@@ -16,9 +16,15 @@ const Finance = () => (
       sx={{
         flexGrow: 1,
         py: 8,
-        backgroundColor: '#251A40'
+        backgroundColor: '#251A40',
+        width:'100%',
+        height: '100%'
       }}
     >
+           <Typography sx={{
+        color: 'white',
+        textAlign: "center"
+      }}>Finance</Typography>
       <Container maxWidth={false}>
         <Grid
           container
@@ -27,6 +33,9 @@ const Finance = () => (
           <Grid
             item
             xs={3}
+            sx={{
+              backgroundColor: 'red'
+            }}
           >
           < CardComponent/>
           </Grid>
@@ -34,13 +43,11 @@ const Finance = () => (
             item
             xs={5}
           >
-          < CardComponent/>
           </Grid>
           <Grid
             item
             xs={4}
           >
-            < CardComponent/>
           </Grid>
         </Grid>
       </Container>
