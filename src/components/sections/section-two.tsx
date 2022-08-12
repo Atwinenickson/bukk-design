@@ -5,6 +5,7 @@ import {
   import WorkIcon from '@mui/icons-material/Work';
   import DirectionsBusFilledIcon from '@mui/icons-material/DirectionsBusFilled';
   import PersonIcon from '@mui/icons-material/Person';
+import { AddBoxTwoTone } from '@mui/icons-material';
   
   
   export const SectionTwoComponent = (props: any) => (
@@ -25,7 +26,7 @@ import {
           alignItems: 'center',
           p: 1,
           m: 1,
-          bgcolor: 'blue',
+          bgcolor: '#2E2957',
           width: '90%',
           height: '70%',
         }}
@@ -36,7 +37,7 @@ import {
           justifyContent: 'space-between',
           p: 1,
           m: 1,
-          bgcolor: 'background.paper',
+          // bgcolor: 'background.paper',
           borderRadius: 1,
         }}
       >
@@ -45,28 +46,67 @@ import {
         color: 'white',
         textAlign: "center"
       }}>Transactions</Typography>
-                        <Stack direction="row" alignItems="center" spacing={0}>
-                            <Button
-                                size="small"
-                                color='primary'
-                                variant= 'text'
+                        <Stack sx={{m:1}} direction="row" alignItems="center" spacing={0}>
+                            <Box
+                               sx={{
+                                size:"small",
+                                // color:'primary',
+                                variant: 'text',
+                                borderRadius:5,
+                                border: 1,
+                                width: '4rem',
+                                height: '1.15rem',
+                                display:"flex",
+                                justifyContent:"center",
+                                alignItems:"center",
+                                bgcolor:"#5B4D48"
+                               }}
                             >
-                                Daily
-                            </Button>
-                            <Button
-                               size="small"
-                               color='primary'
-                               variant= 'text'
+                                <Typography variant="subtitle2" sx={{
+        color: '#b0bec5',
+        textAlign: "center"
+      }}>Daily</Typography>
+                            </Box>
+                            <Box
+                               sx={{
+                                size:"small",
+                                color:'primary',
+                                variant: 'text',
+                                borderRadius:5,
+                                border: 1,
+                                width: '4rem',
+                                height: '1.15rem',
+                                display:"flex",
+                                justifyContent:"center",
+                                alignItems:"center",
+                                bgcolor:"#FFCF12"
+                               }}
                             >
-                                Monthly
-                            </Button>
-                            <Button
-                               size="small"
-                               color='primary'
-                               variant= 'text'
+                                <Typography variant="subtitle2" sx={{
+        color: '#7C7581',
+        textAlign: "center"
+      }}>Monthly</Typography>
+                            </Box>
+                            <Box
+                               sx={{
+                                size:"small",
+                                color:'primary',
+                                variant: 'text',
+                                borderRadius:5,
+                                border: 1,
+                                width: '4rem',
+                                height: '1.2rem',
+                                display:"flex",
+                                justifyContent:"center",
+                                alignItems:"center",
+                                bgcolor:"#5B4D48"
+                               }}
                             >
-                                Yearly
-                            </Button>
+                                <Typography variant="subtitle2" sx={{
+        color: '#cfd8dc',
+        textAlign: "center"
+      }}>Yearly</Typography>
+                            </Box>
                         </Stack>
                 </Box>
 
@@ -78,7 +118,7 @@ import {
           justifyContent: 'space-between',
           p: 1,
           m: 1,
-          bgcolor: 'background.paper',
+          // bgcolor: 'background.paper',
           borderRadius: 1,
         }}
       >
