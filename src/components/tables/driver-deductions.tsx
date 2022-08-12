@@ -1,70 +1,70 @@
 import PropTypes from 'prop-types';
 import {
-  Box,
-  Card,
+  Paper,
   Table,
   TableBody,
   TableCell,
+  TableContainer,
   TableHead,
   TableRow,
+  Typography
 } from '@mui/material';
+import { Driverdeductionstate } from '../../slices/driverdeductionsSlice';
 
-export const DriverDeductionsListResults = ({ driverdeductions, ...rest }) => {
+
+export const DriverDeductionsListResults = ({driverdeductions}: {driverdeductions: Driverdeductionstate[]}) => {
 
   return (
-    <Card {...rest}>
-        <Box sx={{ minWidth: 1050 }}>
-          <Table>
+    <TableContainer component={Paper}>
+          <Table size="small" aria-label="Driver Wallets Table">
             <TableHead>
-              <TableRow>
-                <TableCell>
-                  Driver
+              <TableRow sx={{backgroundColor:'#283593'}}>
+                <TableCell  size='small'>
+                  <Typography sx={{width: 2, fontSize:7, fontWeight:600, color:'white'}}>Driver</Typography>
                 </TableCell>
                 <TableCell>
-                  Country
+                <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>Country</Typography>
                 </TableCell>
                 <TableCell>
-                  City
+                <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>City</Typography>
                 </TableCell>
                 <TableCell>
-                  Earnings
+                <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>Earnings</Typography>
                 </TableCell>
                 <TableCell>
-                  Deductions
+                <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>Deductions</Typography>
                 </TableCell>
               </TableRow>
             </TableHead>
-            <TableBody>
-              {driverdeductions.map((driverdeduction: any) => (
+            <TableBody sx={{backgroundColor:'#1565c0'}}>
+              {driverdeductions?.map((driverdeduction: Driverdeductionstate) => (
                 <TableRow
                   hover
-                  key={driverdeduction.id}
+                  key={driverdeduction.driver}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
 
                   <TableCell>
-                        {driverdeduction.driver}
+                  <Typography sx={{width: 2, fontSize: 8, fontWeight:600, color:'white'}}> {driverdeduction?.driver} </Typography>
+                  </TableCell>
+                 
+                  <TableCell>
+                  <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>  {driverdeduction?.country}  </Typography>
                   </TableCell>
                   <TableCell>
-                    {driverdeduction.country}
+                  <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>  {driverdeduction?.city}  </Typography>
                   </TableCell>
                   <TableCell>
-                    {driverdeduction.city}
-                  </TableCell>
-                  <TableCell>
-                    {driverdeduction.earnings}
-                  </TableCell>
-                  <TableCell>
-                    {driverdeduction.deductions}
+                  <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'white'}}>  {driverdeduction?.deductions}  </Typography>
                   </TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
-        </Box>
-    </Card>
+          </TableContainer>
   );
 };
 
 DriverDeductionsListResults.propTypes = {
-    driverdeductions: PropTypes.array.isRequired
+  driverdeductions: PropTypes.array.isRequired
 };

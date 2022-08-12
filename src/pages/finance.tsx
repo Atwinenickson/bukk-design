@@ -7,18 +7,10 @@ import { SectionOneComponent } from '../components/sections/section-one';
 import { SectionTwoComponent } from '../components/sections/section-two';
 import { SectionThreeComponent } from '../components/sections/section-three';
 
-import { useSelector, useDispatch } from 'react-redux'
-import {getwallets, getWalletValues} from '../slices/driverwalletsSlice'
+
 
 
 const Finance = () => {
-
-const wallets = useSelector(getWalletValues)
-const dispatch = useDispatch();
-
-useEffect(() => {
-    dispatch(getwallets())    
-}, [])
 
 return (
 

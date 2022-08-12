@@ -1,11 +1,26 @@
+import React, { useState, useEffect } from 'react'
 import {
     Box, Typography, Button, Container, Stack, Divider
   } from '@mui/material';
   
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { DriverDeductionsListResults } from '../tables/driver-deductions';
+
+import { useSelector, useDispatch } from 'react-redux'
+import { getdeductions, getDeductionValues } from '../../slices/driverdeductionsSlice';
   
   
-  export const SectionThreeComponent = (props: any) => (
+  export const SectionThreeComponent = (props: any) => {
+
+
+    const driverdeductions = useSelector(getDeductionValues)
+    const dispatch = useDispatch();
+    
+    useEffect(() => {
+        dispatch(getdeductions())    
+    }, [])
+  
+  return(
 <Container
 sx={{
   display: 'flex-col',
@@ -136,8 +151,8 @@ sx={{
         </Stack>
       </Box>
 
-
+<DriverDeductionsListResults driverdeductions={driverdeductions}/>
 
     </Container>
 
-);
+)};
