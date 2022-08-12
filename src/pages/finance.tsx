@@ -4,6 +4,7 @@ import { Box, Container, Grid, Typography } from '@mui/material';
 import { DashboardLayout } from '../components/dashboard-layout';
 import { SectionOneComponent } from '../components/sections/section-one';
 import { SectionTwoComponent } from '../components/sections/section-two';
+import { SectionThreeComponent } from '../components/sections/section-three';
 
 const Finance = () => (
   <>
@@ -50,6 +51,7 @@ const Finance = () => (
             item
             xs={4}
           >
+            <SectionThreeComponent/>
           </Grid>
         </Grid>
       </Container>

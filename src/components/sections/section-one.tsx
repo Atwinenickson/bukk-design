@@ -119,18 +119,31 @@ export const SectionOneComponent = (props: any) => (
         textAlign: "center"
       }}>Graph Here</Typography>
       </Box>
+
+      <Box
+        sx={{
+          display: 'flex',
+          paddingTop:2,
+          flexGrow: 1
+        }}
+      >
       <Button
-        variant="outlined"
+        size='small'
         sx={{ width: 150, height:30, alignContent:"center", backgroundColor:"yellow", color:"black"}}
       >
       <Typography variant="button" display="block"  sx={{
         color: 'black',
         align: "center",
-        m:1
+        m:1,
+        fontSize:8
       }}>
         View All
       </Typography>
       </Button>
+
+      </Box>
+
+
       </Container>
     <Container
       sx={{
@@ -151,18 +164,28 @@ export const SectionOneComponent = (props: any) => (
         fontWeight:300,
         paddingBottom:2
       }}>Payment History</Typography>
+        <Box
+        sx={{
+          display: 'flex',
+          paddingTop:2,
+          flexGrow: 1
+        }}
+      >
       <Button
-        variant="outlined"
+        size='small'
         sx={{ width: 150, height:30, alignContent:"center", backgroundColor:"yellow", color:"black"}}
       >
       <Typography variant="button" display="block"  sx={{
         color: 'black',
         align: "center",
-        m:1
+        m:1,
+        fontSize:8
       }}>
         View All
       </Typography>
       </Button>
+
+      </Box>
     </Container>
   </Box>
 

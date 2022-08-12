@@ -20,11 +20,12 @@ export const SectionTwoComponent = (props: any) => (
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
-          p: 1,
-          m: 1,
-          // bgcolor: 'background.paper',
+          // p: 1,
+          // m: 1,
+          paddingTop:1,
           borderRadius: 1,
-          flexGrow: 1
+          flexGrow: 1,
+          flexWrap: 'wrap',
         }}
       >
 
@@ -46,12 +47,14 @@ export const SectionTwoComponent = (props: any) => (
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              bgcolor: "#5B4D48"
+              bgcolor: "#424242"
             }}
           >
             <Typography variant="subtitle2" sx={{
               color: '#b0bec5',
-              textAlign: "center"
+              textAlign: "center",
+              fontSize:10,
+              fontWeight:300
             }}>Daily</Typography>
           </Box>
           <Box
@@ -71,7 +74,9 @@ export const SectionTwoComponent = (props: any) => (
           >
             <Typography variant="subtitle2" sx={{
               color: '#7C7581',
-              textAlign: "center"
+              textAlign: "center",
+              fontSize:10,
+              fontWeight:300
             }}>Monthly</Typography>
           </Box>
           <Box
@@ -86,13 +91,15 @@ export const SectionTwoComponent = (props: any) => (
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              bgcolor: "#5B4D48",
+              bgcolor: "#977D34",
               flexGrow: 1
             }}
           >
             <Typography variant="subtitle2" sx={{
               color: '#cfd8dc',
-              textAlign: "center"
+              textAlign: "center",
+              fontSize:10,
+              fontWeight:300
             }}>Yearly</Typography>
           </Box>
         </Stack>
