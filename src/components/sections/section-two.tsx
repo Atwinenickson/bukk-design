@@ -9,17 +9,6 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
 export const SectionTwoComponent = (props: any) => (
-  // <Box
-  //   sx={{
-  //     display: 'flex',
-  //     alignItems: 'flex-start',
-  //     flexDirection: 'column',
-  //     p: 1,
-  //     m: 1,
-  //     bgcolor: 'background.paper',
-  //     borderRadius: 1,
-  //   }}
-  // >
     <Container
       sx={{
         display: 'flex-col',
@@ -190,9 +179,6 @@ export const SectionTwoComponent = (props: any) => (
           alignItems: 'flex-end',
           flexDirection: 'column',
           p: 1,
-          // m: 1,
-          // bgcolor: 'background.paper',
-          // borderRadius: 1,
         }}
       >
          <Button
@@ -260,6 +246,5 @@ export const SectionTwoComponent = (props: any) => (
       </Box>
 
     </Container>
-  // </Box>
 
 );
