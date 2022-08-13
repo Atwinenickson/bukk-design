@@ -28,7 +28,7 @@ export const SectionTwoComponent = (props: any) => {
     // if (wallets.loading === 'idle') {
       dispatch(fetchWallets())
     // }
-  }, [])
+  }, [dispatch])
 
 return (
     <Container
