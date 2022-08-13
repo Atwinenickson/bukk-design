@@ -11,13 +11,21 @@ export interface DriverWalletState {
   status: string;
 }
 
-
+const config = {
+  headers:{
+    accept: '*/*',
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': '*',
+    'Access-Control-Allow-Headers': '*'
+  }
+};
 
 
 export const fetchWallets = createAsyncThunk(
 'user/fetchWallets',  ()  => {
     return axios
-      .get( 'https://cors-anywhere.herokuapp.com/' + 'https://mock.bukkhl.work/v1/wallets')
+      .get( 'https://cors-anywhere.herokuapp.com/' + 'https://mock.bukkhl.work/v1/wallets/',config)
       .then(response => response.data)
 
 //     const url = "https://mock.bukkhl.work/v1/wallets";
