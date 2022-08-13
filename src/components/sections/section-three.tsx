@@ -9,7 +9,7 @@ import { DriverDeductionsListResults } from '../tables/driver-deductions';
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchDeductions, selectDeductions } from '../../slices/driverdeductionsSlice';
 import { BaseFareListResults } from '../tables/base-fare-prices';
-import { getbusfares, getBusFareValues } from '../../slices/busfareSlice';
+import { fetchBusFares, selectBusFares } from '../../slices/busfareSlice';
 import { AppDispatch } from '../../store';
   
   
@@ -17,13 +17,13 @@ import { AppDispatch } from '../../store';
 
 
     const {driverdeductions} = useSelector(selectDeductions)
-    const basefareprices = useSelector(getBusFareValues)
+    const {busfares} = useSelector(selectBusFares)
     const dispatch = useDispatch<AppDispatch>();
   
     
     useEffect(() => {
         dispatch(fetchDeductions())  
-        dispatch(getbusfares())    
+        dispatch(fetchBusFares())    
     }, [dispatch])
   
   return(
@@ -64,7 +64,17 @@ import { AppDispatch } from '../../store';
           </Box>
         </Stack>
       </Box>
-      <BaseFareListResults basefareprices={basefareprices}/>
+
+      <Box>
+      {busfares.loading &&  <Box sx={{ display: 'flex' }}>
+      <CircularProgress />
+    </Box>}
+      {!busfares.loading && busfares.error ?  <Box sx={{ display: 'flex' }}><Alert severity="error">{driverdeductions.error}</Alert></Box> : null}
+      {!busfares.loading && busfares.busfares.length ? (
+            <BaseFareListResults basefareprices={busfares.busfares}/>
+          
+      ) : null}
+</Box>
 <Container
 sx={{
   display: 'flex-col',

@@ -1,5 +1,7 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type {RootState} from '../store'
+import axios from 'axios';
+import type { RootState } from '../store'
+import { createSlice, createSelector, PayloadAction, createAsyncThunk, } from "@reduxjs/toolkit";
+
 
 export interface Busfarestate {
   country: string;
@@ -9,30 +11,54 @@ export interface Busfarestate {
   tax: number;
 }
 
-const initialState: Busfarestate[] = []
 
-export const busfaresSlice = createSlice({
+
+export const fetchBusFares = createAsyncThunk(
+'user/fetchBusFares',  ()  => {
+    return axios
+      .get('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.data)
+  })
+
+
+const busfares: Busfarestate[] = []
+
+
+const initialState = {
+  loading: false,
+  busfares: busfares,
+  error: ''
+}
+
+const busfaresSlice = createSlice({
   name: 'busfares',
   initialState,
   reducers: {
-    getbusfares: (state) => {
-      state.push(
-        {
-          "country": "country",
-          "rate": 6,
-          "discount": 1,
-          "city": "city",
-          "tax": 1
-        }
-      )
-    },
   },
+  extraReducers: (builder) => {
+    builder.addCase(fetchBusFares.pending, (state) => {
+      state.busfares = [];
+      state.loading = true;
+    });
+    builder.addCase(
+      fetchBusFares.fulfilled, (state, { payload }) => {
+        state.busfares = payload;
+        state.loading = false;
+        state.error = ''
+      });
+    builder.addCase(
+      fetchBusFares.rejected, (state, action) => {
+        state.loading = false
+        state.busfares = []
+        state.error = action.error.message!
+      });
+  }
 })
 
-// Action creators are generated for each case reducer function
-export const { getbusfares } = busfaresSlice.actions
 
-// Selector to get deductions
-export const getBusFareValues =  (state: RootState) => state.busfares
-
-export default busfaresSlice.reducer
+export const selectBusFares = createSelector(
+  (state: RootState) => ({
+    busfares: state.busfares,
+  }), (state) => state
+);
+export default busfaresSlice;
