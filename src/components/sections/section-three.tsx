@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {
-    Box, Typography, Button, Container, Stack, Divider, CircularProgress, Alert
+    Box, Typography, Container, Stack, CircularProgress, Alert, Collapse, IconButton
   } from '@mui/material';
   
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -11,10 +11,12 @@ import { fetchDeductions, selectDeductions } from '../../slices/driverdeductions
 import { BaseFareListResults } from '../tables/base-fare-prices';
 import { fetchBusFares, selectBusFares } from '../../slices/busfareSlice';
 import { AppDispatch } from '../../store';
+
+import CloseIcon from '@mui/icons-material/Close';
   
   
   export const SectionThreeComponent = (props: any) => {
-
+    const [open, setOpen] = useState(true);
 
     const {driverdeductions} = useSelector(selectDeductions)
     const {busfares} = useSelector(selectBusFares)
@@ -69,7 +71,23 @@ import { AppDispatch } from '../../store';
       {busfares.loading &&  <Box sx={{ display: 'flex' }}>
       <CircularProgress />
     </Box>}
-      {!busfares.loading && busfares.error ?  <Box sx={{ display: 'flex' }}><Alert severity="error">{driverdeductions.error}</Alert></Box> : null}
+      {!busfares.loading && busfares.error ?  <Box sx={{ display: 'flex' }}>
+
+      <Collapse in={open}>
+        <Alert   action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
+              <CloseIcon fontSize="inherit" />
+            </IconButton>
+          } severity="error">{busfares.error}</Alert>
+            </Collapse>
+      </Box> : null}
       {!busfares.loading && busfares.busfares.length ? (
             <BaseFareListResults basefareprices={busfares.busfares}/>
           
@@ -154,7 +172,22 @@ sx={{
       {driverdeductions.loading &&  <Box sx={{ display: 'flex' }}>
       <CircularProgress />
     </Box>}
-      {!driverdeductions.loading && driverdeductions.error ?  <Box sx={{ display: 'flex' }}><Alert severity="error">{driverdeductions.error}</Alert></Box> : null}
+      {!driverdeductions.loading && driverdeductions.error ?  <Box sx={{ display: 'flex' }}>
+      <Collapse in={open}>
+        <Alert   action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
+              <CloseIcon fontSize="inherit" />
+            </IconButton>
+          } severity="error">{driverdeductions.error}</Alert>
+            </Collapse>
+        </Box> : null}
       {!driverdeductions.loading && driverdeductions.driverdeductions.length ? (
             <DriverDeductionsListResults driverdeductions={driverdeductions.driverdeductions}/>
           
