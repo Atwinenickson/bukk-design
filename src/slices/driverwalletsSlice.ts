@@ -9,59 +9,33 @@ export interface DriverWalletState {
   trips: number;
   name: string;
   status: string;
-  // loading?: string;
-  // error?: string;
 }
 
 
 
 
 export const fetchWallets = createAsyncThunk(
-  // "drivers/fetchWallets", async (_, thunkAPI) => {
-  //   try {
-  //   const url = "https://mock.bukkhl.work/v1/wallets";
-  //   var headers = {
-  //   }
-  //   // { mode: 'no-cors'}
-    
-  //   const res = await fetch(url, {
-  //       method : "GET",
-  //       mode: 'no-cors',
-  //       headers: headers
-  //   })
+'user/fetchWallets',  ()  => {
+    return axios
+      .get('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.data)
 
-  //   const jsonData = await res.json();
-  //   console.log('json')
-  //   console.log(jsonData)
-
-  // return jsonData
-'user/fetchUsers',  async (_, thunkAPI)  => {
-    // return axios
-    //   .get('https://mock.bukkhl.work/v1/wallets')
-    //   .then(response => response.data)
-
-    const url = "https://mock.bukkhl.work/v1/wallets";
-    var headers = {
-    }
- //   // { mode: 'no-cors'}
+//     const url = "https://mock.bukkhl.work/v1/wallets";
+//     var headers = {
+//     }
    
-   const res = await fetch(url, {
-        method : "GET",
-        mode: 'no-cors',
-       headers: headers
+//    const res = await fetch(url, {
+//         method : "GET",
+//         mode: 'no-cors',
+//        headers: headers
+//   })
+
+//  const jsonData = await res.json();
+//  console.log('json')
+//     console.log(jsonData)
+
+//  return jsonData
   })
-
- const jsonData = await res.json();
- console.log('json')
-    console.log(jsonData)
-
- return jsonData
-  })
-
-  //   } catch (error: any) {
-  //     return thunkAPI.rejectWithValue({ error: error.message });
-  //   }
-  // });
 
 
 const driverwallets: DriverWalletState[] = []
@@ -97,21 +71,10 @@ const driverwalletsSlice = createSlice({
   }
 })
 
-// Action creators are generated for each case reducer function
-// export const { getwallets } = driverwalletsSlice.actions
-
-// export const selectAllDrivers = ({state}: {state: driverwallets}) => state.driverwallets.driverwallets
-
-
-// Selector to get wallets
-// export const getWalletValues =  (state: RootState) => state.driverwallets
-
-// export default driverwalletsSlice.reducer
 
 export const selectWallets = createSelector(
   (state: RootState) => ({
     wallets: state.driverwallets,
-    //  loading: state.loading,
   }), (state) => state
 );
 export default driverwalletsSlice;

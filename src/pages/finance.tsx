@@ -15,20 +15,6 @@ import { useSelector, useDispatch } from 'react-redux';
 
 const Finance = () => {
 
-  const {wallets} = useSelector(selectWallets)
-
-  const dispatch = useDispatch<AppDispatch>();
-  
-  // useEffect(() => {
-  //     dispatch(fetchWallets())    
-  // }, [dispatch])
-
-  useEffect(() => {
-    // if (wallets.loading === 'idle') {
-      dispatch(fetchWallets())
-    // }
-  }, [])
-
 return (
 
   <>
@@ -58,19 +44,6 @@ return (
         textAlign: "center"
       }}>Finance Panel</Typography>
       </Box> 
-
-         <div>
-      <h2>List of Wallets</h2>
-      {wallets.loading && <div>Loading...</div>}
-      {!wallets.loading && wallets.error ? <div>Error: {wallets.error}</div> : null}
-      {!wallets.loading && wallets.driverwallets.length ? (
-        <ul>
-          {wallets.driverwallets.map(wallet => (
-            <li key={wallet.name}>{wallet.name} {wallet.earnings} {wallet.trips} {wallet.country}</li>
-          ))}
-        </ul>
-      ) : null}
-    </div> 
       <Container maxWidth={false}>
         <Grid
           container
