@@ -1,6 +1,7 @@
 import {
   Box, BoxProps, Typography, Button, Container
 } from '@mui/material';
+import DriverCustomerChart from '../../graphs/driver-customer';
 
 
 export const SectionOneComponent = (props: any) => (
@@ -116,10 +117,7 @@ export const SectionOneComponent = (props: any) => (
         paddingBottom:2
       }}>Maker Checkers</Box>
       <Box>
-      <Typography variant="subtitle2" sx={{
-        color: 'white',
-        textAlign: "center"
-      }}>Graph Here</Typography>
+     < DriverCustomerChart/>
       </Box>
 
       <Box

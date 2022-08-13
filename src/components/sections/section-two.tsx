@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {
-  Box, Typography, Button, Container, Stack, Divider, CircularProgress, Alert
+  Box, Typography, Button, Container, Stack, Divider, CircularProgress, Alert, IconButton
 } from '@mui/material';
 
 import WorkIcon from '@mui/icons-material/Work';
@@ -12,9 +12,12 @@ import { useSelector, useDispatch } from 'react-redux'
 import { fetchWallets, selectWallets } from '../../slices/driverwalletsSlice';
 import { AppDispatch } from '../../store';
 
+import CloseIcon from '@mui/icons-material/Close';
+import Collapse from '@mui/material/Collapse';
+
 
 export const SectionTwoComponent = (props: any) => {
-
+  const [open, setOpen] = useState(true);
 
   const {wallets} = useSelector(selectWallets)
 
@@ -283,7 +286,22 @@ return (
       {wallets.loading &&   <Box sx={{ display: 'flex' }}>
       <CircularProgress />
     </Box>}
-      {!wallets.loading && wallets.error ?  <Box sx={{ display: 'flex' }}><Alert severity="error">{wallets.error}</Alert></Box> : null}
+      {!wallets.loading && wallets.error ?  <Box sx={{ display: 'flex' }}>
+      <Collapse in={open}>
+        <Alert   action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
+              <CloseIcon fontSize="inherit" />
+            </IconButton>
+          } severity="error">{wallets.error}</Alert>
+            </Collapse>
+          </Box> : null}
       {!wallets.loading && wallets.driverwallets.length ? (
           <DriverWalletsListResults driverwallets={wallets.driverwallets}/>
           
