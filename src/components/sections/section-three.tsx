@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {
-    Box, Typography, Button, Container, Stack, Divider
+    Box, Typography, Button, Container, Stack, Divider, CircularProgress
   } from '@mui/material';
   
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -138,14 +138,16 @@ sx={{
         </Stack>
       </Box>
 
-<div>
-      {driverdeductions.loading && <div>Loading...</div>}
+<Box>
+      {driverdeductions.loading &&  <Box sx={{ display: 'flex' }}>
+      <CircularProgress />
+    </Box>}
       {!driverdeductions.loading && driverdeductions.error ? <div>Error: {driverdeductions.error}</div> : null}
       {!driverdeductions.loading && driverdeductions.driverdeductions.length ? (
             <DriverDeductionsListResults driverdeductions={driverdeductions.driverdeductions}/>
           
       ) : null}
-</div>
+</Box>
 
     </Container>
     </>
