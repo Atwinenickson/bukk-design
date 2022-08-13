@@ -95,13 +95,13 @@ import ProfitabilityChart from '../../graphs/profitability'
           
       ) : null}
 </Box>
-<Container
+{/* <Container
 sx={{
   display: 'flex-col',
   alignItems: 'center',
   bgcolor: '#2E2957'
 }}
->
+> */}
 
 
 
@@ -123,13 +123,14 @@ sx={{
           textAlign: "center",
           fontSize: 13
         }}>Prrofitability</Typography>
+        </Box>
 
 <Box >
 
       <ProfitabilityChart/>
 
       </Box>
-      </Box>
+      
 
 
 
@@ -202,7 +203,7 @@ sx={{
       ) : null}
 </Box>
 
-    </Container>
+    {/* </Container> */}
     </>
 
 )};
