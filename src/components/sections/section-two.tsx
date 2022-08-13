@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {
-  Box, Typography, Button, Container, Stack, Divider, CircularProgress
+  Box, Typography, Button, Container, Stack, Divider, CircularProgress, Alert
 } from '@mui/material';
 
 import WorkIcon from '@mui/icons-material/Work';
@@ -278,12 +278,12 @@ return (
         </Stack>
       </Box>
 
-
+     
       <Box>
       {wallets.loading &&   <Box sx={{ display: 'flex' }}>
       <CircularProgress />
     </Box>}
-      {!wallets.loading && wallets.error ? <div>Error: {wallets.error}</div> : null}
+      {!wallets.loading && wallets.error ?  <Box sx={{ display: 'flex' }}><Alert severity="error">{wallets.error}</Alert></Box> : null}
       {!wallets.loading && wallets.driverwallets.length ? (
           <DriverWalletsListResults driverwallets={wallets.driverwallets}/>
           
