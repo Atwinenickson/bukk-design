@@ -1,6 +1,6 @@
 import axios from 'axios';
-import type {RootState} from '../store'
-import { createSlice,createSelector,PayloadAction,createAsyncThunk,} from "@reduxjs/toolkit";
+import type { RootState } from '../store'
+import { createSlice, createSelector, PayloadAction, createAsyncThunk, } from "@reduxjs/toolkit";
 
 
 export interface DriverWalletState {
@@ -17,43 +17,84 @@ export interface DriverWalletState {
 
 
 export const fetchWallets = createAsyncThunk(
-  "drivers/fetchWallets", async (_, thunkAPI) => {
-     try {
-        const response = await fetch('https://mock.bukkhl.work/v1/wallets');//where you want to fetch data
-        return await response.json();
-      } catch (error:any) {
-         return thunkAPI.rejectWithValue({ error: error.message });
-      }
-});
+  // "drivers/fetchWallets", async (_, thunkAPI) => {
+  //   try {
+  //   const url = "https://mock.bukkhl.work/v1/wallets";
+  //   var headers = {
+  //   }
+  //   // { mode: 'no-cors'}
+    
+  //   const res = await fetch(url, {
+  //       method : "GET",
+  //       mode: 'no-cors',
+  //       headers: headers
+  //   })
+
+  //   const jsonData = await res.json();
+  //   console.log('json')
+  //   console.log(jsonData)
+
+  // return jsonData
+'user/fetchUsers',  async (_, thunkAPI)  => {
+    // return axios
+    //   .get('https://mock.bukkhl.work/v1/wallets')
+    //   .then(response => response.data)
+
+    const url = "https://mock.bukkhl.work/v1/wallets";
+    var headers = {
+    }
+ //   // { mode: 'no-cors'}
+   
+   const res = await fetch(url, {
+        method : "GET",
+        mode: 'no-cors',
+       headers: headers
+  })
+
+ const jsonData = await res.json();
+ console.log('json')
+    console.log(jsonData)
+
+ return jsonData
+  })
+
+  //   } catch (error: any) {
+  //     return thunkAPI.rejectWithValue({ error: error.message });
+  //   }
+  // });
 
 
-const driverwallets:DriverWalletState[] = []
+const driverwallets: DriverWalletState[] = []
 
- const driverwalletsSlice = createSlice({
+const initialState = {
+  loading: false,
+  driverwallets: driverwallets,
+  error: ''
+}
+
+const driverwalletsSlice = createSlice({
   name: 'driverwallets',
-  initialState: {
-    driverwallets,
-    loading: "idle",
-    error: "",
-  },
+  initialState,
   reducers: {
   },
   extraReducers: (builder) => {
     builder.addCase(fetchWallets.pending, (state) => {
       state.driverwallets = [];
-        state.loading = "loading";
+      state.loading = true;
     });
     builder.addCase(
-       fetchWallets.fulfilled, (state, { payload }) => {
-          state.driverwallets = payload;
-          state.loading = "loaded";
-    });
+      fetchWallets.fulfilled, (state, { payload }) => {
+        state.driverwallets = payload;
+        state.loading = false;
+        state.error = ''
+      });
     builder.addCase(
-      fetchWallets.rejected,(state) => {
-          state.loading = "error";
-          state.error = "error";
-    });
- }
+      fetchWallets.rejected, (state, action) => {
+        state.loading = false
+        state.driverwallets = []
+        state.error = action.error.message!
+      });
+  }
 })
 
 // Action creators are generated for each case reducer function
@@ -69,8 +110,8 @@ const driverwallets:DriverWalletState[] = []
 
 export const selectWallets = createSelector(
   (state: RootState) => ({
-     wallets: state.driverwallets,
+    wallets: state.driverwallets,
     //  loading: state.loading,
-  }), (state) =>  state
+  }), (state) => state
 );
 export default driverwalletsSlice;

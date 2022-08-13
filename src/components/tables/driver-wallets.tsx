@@ -12,7 +12,7 @@ import {
 import { DriverWalletState } from '../../slices/driverwalletsSlice';
 
 export const DriverWalletsListResults = ({driverwallets}: {driverwallets: DriverWalletState[]}) => {
-
+let uniqueId = Date.now().toString(36) + Math.random().toString(36).substring(2);
   return (
     <TableContainer component={Paper}>
           <Table size="small" aria-label="Driver Wallets Table">
@@ -42,7 +42,7 @@ export const DriverWalletsListResults = ({driverwallets}: {driverwallets: Driver
               {driverwallets?.map((driverwallet: DriverWalletState) => (
                 <TableRow
                   hover
-                  key={driverwallet.name}
+                  key={driverwallet.name + uniqueId}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
 

@@ -25,10 +25,10 @@ export const SectionTwoComponent = (props: any) => {
   // }, [dispatch])
 
   useEffect(() => {
-    if (wallets.loading === 'idle') {
+    // if (wallets.loading === 'idle') {
       dispatch(fetchWallets())
-    }
-  }, [wallets.loading, dispatch])
+    // }
+  }, [])
 
 return (
     <Container
