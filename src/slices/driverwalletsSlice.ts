@@ -19,8 +19,8 @@ export interface DriverWalletState {
 export const fetchWallets = createAsyncThunk(
   "drivers/fetchWallets", async (_, thunkAPI) => {
      try {
-        const response = await axios.get('https://mock.bukkhl.work/v1/wallets');//where you want to fetch data
-        return await response.data;
+        const response = await fetch('https://mock.bukkhl.work/v1/wallets');//where you want to fetch data
+        return await response.json();
       } catch (error:any) {
          return thunkAPI.rejectWithValue({ error: error.message });
       }

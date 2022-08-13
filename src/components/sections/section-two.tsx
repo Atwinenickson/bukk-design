@@ -17,11 +17,18 @@ export const SectionTwoComponent = (props: any) => {
 
 
   const {wallets} = useSelector(selectWallets)
+
   const dispatch = useDispatch<AppDispatch>();
   
+  // useEffect(() => {
+  //     dispatch(fetchWallets())    
+  // }, [dispatch])
+
   useEffect(() => {
-      dispatch(fetchWallets())    
-  }, [dispatch])
+    if (wallets.loading === 'idle') {
+      dispatch(fetchWallets())
+    }
+  }, [wallets.loading, dispatch])
 
 return (
     <Container
