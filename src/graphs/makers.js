@@ -4,12 +4,12 @@ import { Doughnut } from 'react-chartjs-2';
 
 
 
-const DriverCustomerChart = () => {
+const MakersChart = () => {
 
-let customers_drivers = [50, 50];
+let customers_drivers = [40, 60];
 
 var options = {        
-  cutout: 70,
+  cutout: 29,
 };
 
   const data = {
@@ -17,8 +17,8 @@ var options = {
     datasets: [{
       data: customers_drivers,
       backgroundColor: [
-        '#F12D2D',
-        '#2DF193'
+        '#2DF193',
+        '#F12D7F'
       ],
       hoverOffset: 4
     }]
@@ -35,7 +35,7 @@ var options = {
          var fontSize = (height / 160).toFixed(2);
          ctx.font = fontSize + "em sans-serif";
          ctx.textBaseline = "top";
-         var text = "Driver-Customer",
+         var text = "46%",
          textX = Math.round((width - ctx.measureText(text).width) / 2),
          textY = height / 2;
          ctx.fillStyle = 'rgba(#FFFFFF)';
@@ -51,4 +51,4 @@ var options = {
   );
 };
 
-export default DriverCustomerChart;
+export default MakersChart;

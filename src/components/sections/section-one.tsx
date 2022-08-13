@@ -1,7 +1,9 @@
 import {
-  Box, BoxProps, Typography, Button, Container
+  Box, BoxProps, Typography, Button, Container, Stack, Badge
 } from '@mui/material';
 import DriverCustomerChart from '../../graphs/driver-customer';
+import MakersChart from '../../graphs/makers'
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 
 
 export const SectionOneComponent = (props: any) => (
@@ -49,11 +51,15 @@ export const SectionOneComponent = (props: any) => (
         flexGrow: 1
       }}
     >
-      <Typography sx={{
-        flexGrow: 1,
-        color: 'white',
-        textAlign: "center"
-      }}>GRAPH HERE</Typography>
+      <Box  sx={{
+            width:'90%',
+            height:'80%',
+            display: 'flex',
+            alignItems: 'center',
+          }}>
+              < DriverCustomerChart/>
+          </Box>
+    
     </Box>
           <Container
       sx={{
@@ -117,7 +123,21 @@ export const SectionOneComponent = (props: any) => (
         paddingBottom:2
       }}>Maker Checkers</Box>
       <Box>
-     < DriverCustomerChart/>
+      <Stack  direction="row" alignItems="center" spacing={1}>
+          <Box sx={{
+            width:'0.5'
+          }}>
+          <MakersChart/>
+          </Box>
+          <Box>
+          <Badge badgeContent={4} color="error">
+          <NotificationsNoneIcon sx={{
+            color:'yellow',
+            fontSize:50
+          }} />
+        </Badge>
+          </Box>
+        </Stack>
       </Box>
 
       <Box
@@ -160,9 +180,10 @@ export const SectionOneComponent = (props: any) => (
       <Typography  variant="subtitle2" sx={{
         color: 'white',
         align: "center",
-        fontSize:10,
-        fontWeight:300,
-        paddingBottom:2
+        fontSize:15,
+        fontWeight:400,
+        paddingBottom:1,
+        marginLeft:1
       }}>Payment History</Typography>
         <Box
         sx={{
