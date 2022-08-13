@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import driverwalletsSlice from './slices/driverwalletsSlice'
-import driverdeductionsReducer from './slices/driverdeductionsSlice'
+import driverdeductionsSlice from './slices/driverdeductionsSlice'
 import busfaresReducer from './slices/busfareSlice'
 
 
 export const store = configureStore({
   reducer: {
     driverwallets:driverwalletsSlice.reducer,
-    driverdeductions:driverdeductionsReducer,
+    driverdeductions:driverdeductionsSlice.reducer,
     busfares:busfaresReducer
   },
 })

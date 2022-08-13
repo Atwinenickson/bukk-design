@@ -7,20 +7,22 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { DriverDeductionsListResults } from '../tables/driver-deductions';
 
 import { useSelector, useDispatch } from 'react-redux'
-import { getdeductions, getDeductionValues } from '../../slices/driverdeductionsSlice';
+import { fetchDeductions, selectDeductions } from '../../slices/driverdeductionsSlice';
 import { BaseFareListResults } from '../tables/base-fare-prices';
 import { getbusfares, getBusFareValues } from '../../slices/busfareSlice';
+import { AppDispatch } from '../../store';
   
   
   export const SectionThreeComponent = (props: any) => {
 
 
-    const driverdeductions = useSelector(getDeductionValues)
+    const {driverdeductions} = useSelector(selectDeductions)
     const basefareprices = useSelector(getBusFareValues)
-    const dispatch = useDispatch();
+    const dispatch = useDispatch<AppDispatch>();
+  
     
     useEffect(() => {
-        dispatch(getdeductions())  
+        dispatch(fetchDeductions())  
         dispatch(getbusfares())    
     }, [dispatch])
   
@@ -136,7 +138,14 @@ sx={{
         </Stack>
       </Box>
 
-<DriverDeductionsListResults driverdeductions={driverdeductions}/>
+<div>
+      {driverdeductions.loading && <div>Loading...</div>}
+      {!driverdeductions.loading && driverdeductions.error ? <div>Error: {driverdeductions.error}</div> : null}
+      {!driverdeductions.loading && driverdeductions.driverdeductions.length ? (
+            <DriverDeductionsListResults driverdeductions={driverdeductions.driverdeductions}/>
+          
+      ) : null}
+</div>
 
     </Container>
     </>
