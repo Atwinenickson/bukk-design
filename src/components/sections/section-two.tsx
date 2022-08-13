@@ -279,7 +279,16 @@ return (
       </Box>
 
 
-<DriverWalletsListResults driverwallets={wallets.driverwallets}/>
+      <div>
+      {wallets.loading && <div>Loading...</div>}
+      {!wallets.loading && wallets.error ? <div>Error: {wallets.error}</div> : null}
+      {!wallets.loading && wallets.driverwallets.length ? (
+          <DriverWalletsListResults driverwallets={wallets.driverwallets}/>
+          
+      ) : null}
+</div>
+
+
 
 
 
