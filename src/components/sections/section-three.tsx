@@ -13,6 +13,8 @@ import { fetchBusFares, selectBusFares } from '../../slices/busfareSlice';
 import { AppDispatch } from '../../store';
 
 import CloseIcon from '@mui/icons-material/Close';
+
+import ProfitabilityChart from '../../graphs/profitability'
   
   
   export const SectionThreeComponent = (props: any) => {
@@ -121,6 +123,12 @@ sx={{
           textAlign: "center",
           fontSize: 13
         }}>Prrofitability</Typography>
+
+<Box >
+
+      <ProfitabilityChart/>
+
+      </Box>
       </Box>
 
 

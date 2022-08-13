@@ -53,7 +53,7 @@ export const SectionOneComponent = (props: any) => (
     >
       <Box  sx={{
             width:'90%',
-            height:'80%',
+            height:'60%',
             display: 'flex',
             alignItems: 'center',
           }}>

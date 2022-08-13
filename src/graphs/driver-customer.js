@@ -46,7 +46,7 @@ var options = {
 
   return (
     < >
-      <Doughnut type="doughnut" data={data} options={options}  plugins={plugins}   />
+      <Doughnut  type="doughnut" data={data} options={options}  plugins={plugins}   />
     </>
   );
 };
