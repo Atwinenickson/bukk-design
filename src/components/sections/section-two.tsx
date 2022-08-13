@@ -9,18 +9,19 @@ import PersonIcon from '@mui/icons-material/Person';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { DriverWalletsListResults } from '../tables/driver-wallets';
 import { useSelector, useDispatch } from 'react-redux'
-import { getwallets, getWalletValues } from '../../slices/driverwalletsSlice';
+import { fetchWallets, selectWallets } from '../../slices/driverwalletsSlice';
+import { AppDispatch } from '../../store';
 
 
 export const SectionTwoComponent = (props: any) => {
 
 
-  const wallets = useSelector(getWalletValues)
-  const dispatch = useDispatch();
+  const {wallets} = useSelector(selectWallets)
+  const dispatch = useDispatch<AppDispatch>();
   
   useEffect(() => {
-      dispatch(getwallets())    
-  }, [])
+      dispatch(fetchWallets())    
+  }, [dispatch])
 
 return (
     <Container
@@ -271,7 +272,7 @@ return (
       </Box>
 
 
-<DriverWalletsListResults driverwallets={wallets}/>
+<DriverWalletsListResults driverwallets={wallets.driverwallets}/>
 
 
 

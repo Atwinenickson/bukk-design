@@ -11,7 +11,6 @@ import {
 } from '@mui/material';
 import { DriverWalletState } from '../../slices/driverwalletsSlice';
 
-
 export const DriverWalletsListResults = ({driverwallets}: {driverwallets: DriverWalletState[]}) => {
 
   return (

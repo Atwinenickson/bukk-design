@@ -22,7 +22,7 @@ import { getbusfares, getBusFareValues } from '../../slices/busfareSlice';
     useEffect(() => {
         dispatch(getdeductions())  
         dispatch(getbusfares())    
-    }, [])
+    }, [dispatch])
   
   return(
     <>
