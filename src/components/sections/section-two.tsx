@@ -16,6 +16,9 @@ import CloseIcon from '@mui/icons-material/Close';
 import Collapse from '@mui/material/Collapse';
 
 
+import YearlyChart from '../../graphs/year-data'
+
+
 export const SectionTwoComponent = (props: any) => {
   const [open, setOpen] = useState(true);
 
@@ -203,6 +206,10 @@ return (
             fontSize: 10
           }}>R. 108,908.04</Typography>
         </Stack>
+      </Box>
+
+      <Box>
+      <YearlyChart/>
       </Box>
 
 

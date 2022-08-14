@@ -95,14 +95,6 @@ import ProfitabilityChart from '../../graphs/profitability'
           
       ) : null}
 </Box>
-{/* <Container
-sx={{
-  display: 'flex-col',
-  alignItems: 'center',
-  bgcolor: '#2E2957'
-}}
-> */}
-
 
 
 
@@ -113,7 +105,6 @@ sx={{
           justifyContent: 'space-between',
           p: 1,
           m: 1,
-          // bgcolor: 'background.paper',
           borderRadius: 1,
         }}
       >

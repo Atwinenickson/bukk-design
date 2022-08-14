@@ -44,7 +44,7 @@ const ProfitabilityChart = () => {
         },
         layout: {
           padding: {
-            bottom: 10
+            bottom: 2
           },
       },
       scales: {
@@ -96,7 +96,6 @@ const ProfitabilityChart = () => {
       width={5} height={3}
       options={options}
       data={profitabilityChartData}
-      plugins={sublables}
       
     />
   );
