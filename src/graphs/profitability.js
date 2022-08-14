@@ -35,18 +35,32 @@ const ProfitabilityChart = () => {
             color: "white",
             align: "end",
             anchor: "end",
-            font: { size: "14" }
+            font: { size: "8" }
           },
+          legend: {
+            display: false
+         }
           
-        },
-        legend: {
-          display: false,
         },
         layout: {
           padding: {
             bottom: 10
           }
       },
+      scales: {
+        x: {
+            display: true,
+            title: {
+                display: true,
+                text: 'Vehicle Types'
+            }
+        },
+        y: {
+          ticks: {
+              display: false
+          }
+      }
+    }
       };
 
       const sublables = {

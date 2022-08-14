@@ -25,7 +25,7 @@ const config = {
 export const fetchWallets = createAsyncThunk(
 'user/fetchWallets',  ()  => {
     return axios
-      .get( 'https://cors-anywhere.herokuapp.com/' + 'https://mock.bukkhl.work/v1/wallets/',config)
+      .get( 'https://jsonplaceholder.typicode.com/users',config)
       .then(response => response.data)
 
 //     const url = "https://mock.bukkhl.work/v1/wallets";
