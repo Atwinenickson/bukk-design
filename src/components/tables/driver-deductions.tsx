@@ -19,7 +19,7 @@ export const DriverDeductionsListResults = ({driverdeductions}: {driverdeduction
           <Table size="small" aria-label="Driver Wallets Table">
             <TableHead style={{ backgroundColor: '#251A40' }}>
               <TableRow >
-                <TableCell  size='small'>
+                <TableCell>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Driver</Typography>
                 </TableCell>
                 <TableCell>
