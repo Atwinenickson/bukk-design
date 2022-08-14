@@ -76,7 +76,7 @@ const YearlyChart = () => {
   const barChart = (
     <Bar
       type="bar"
-      width={7} height={5}
+      width={5} height={3}
       options={options}
       data={yearlyChartData}
       
