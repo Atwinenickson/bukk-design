@@ -125,6 +125,16 @@ const items = [
               </a>
             </NextLink>
             </Box>
+
+            <Box
+          >
+            <Typography variant="subtitle2" sx={{
+              color: 'white',
+              textAlign: "center",
+              fontSize:10,
+              fontWeight:900
+            }}>eBUKK</Typography>
+          </Box>
           
         <Box sx={{ flexGrow: 1 }}>
       <IconButton
