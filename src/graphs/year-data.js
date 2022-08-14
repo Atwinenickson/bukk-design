@@ -12,7 +12,7 @@ const YearlyChart = () => {
   const yearlyChartData = {
         labels:  ["JAN", "FEB", "MAR","APR", "MAY", "JUNE","JUL", "AUG"],
         datasets: [{
-          label: 'Vehicle Types',
+          borderWidth: 0 ,
           data: [100, 30, 100, 99, 99,99,99,99],
           backgroundColor: [
             '#965C14',
@@ -22,6 +22,7 @@ const YearlyChart = () => {
 
         {
             data: [80, 100, 90, 90, 90,90,90,90],
+            borderWidth: 0 ,
             backgroundColor: [
             '#47AF2C',
             ],
@@ -31,6 +32,7 @@ const YearlyChart = () => {
 
           {
             data: [70, 90, 80, 80, 80,90,90,90],
+            borderWidth: 0 ,
             backgroundColor: [
                 '#BC2C74',
             ],
@@ -41,13 +43,6 @@ const YearlyChart = () => {
 
       const options = {
         plugins: {
-        //   datalabels: {
-        //     display: true,
-        //     color: "white",
-        //     align: "end",
-        //     anchor: "end",
-        //     font: { size: "8" }
-        //   },
           legend: {
             display: false
          }
@@ -71,7 +66,6 @@ const YearlyChart = () => {
               display: false
           },
           grid: {
-            // display: false,
             drawBorder: false,
           }
       }
