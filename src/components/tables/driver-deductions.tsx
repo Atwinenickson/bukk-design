@@ -13,7 +13,7 @@ import { Driverdeductionstate } from '../../slices/driverdeductionsSlice';
 
 
 export const DriverDeductionsListResults = ({driverdeductions}: {driverdeductions: Driverdeductionstate[]}) => {
-
+  let uniqueId = Date.now().toString(36) + Math.random().toString(36).substring(2);
   return (
     <TableContainer component={Paper}>
           <Table size="small" aria-label="Driver Wallets Table">
@@ -40,7 +40,7 @@ export const DriverDeductionsListResults = ({driverdeductions}: {driverdeduction
               {driverdeductions?.map((driverdeduction: Driverdeductionstate) => (
                 <TableRow
                   hover
-                  key={driverdeduction.driver}
+                  key={driverdeduction.driver + uniqueId}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
 

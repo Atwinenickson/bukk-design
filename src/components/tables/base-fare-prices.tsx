@@ -13,13 +13,13 @@ import { Busfarestate } from '../../slices/busfareSlice';
 
 
 export const BaseFareListResults = ({basefareprices}: {basefareprices: Busfarestate[]}) => {
-
+  let uniqueId = Date.now().toString(36) + Math.random().toString(36).substring(2);
   return (
     <TableContainer component={Paper}>
           <Table size="small" aria-label="Driver Wallets Table">
             <TableHead>
-              <TableRow sx={{backgroundColor:'#283593'}}>
-                <TableCell  size='small'>
+              <TableRow sx={{backgroundColor:'#2E2957'}}>
+                <TableCell>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Country</Typography>
                 </TableCell>
                 <TableCell>
@@ -40,24 +40,24 @@ export const BaseFareListResults = ({basefareprices}: {basefareprices: Busfarest
               {basefareprices?.map((basefareprice: Busfarestate) => (
                 <TableRow
                   hover
-                  key={basefareprice.city}
+                  key={basefareprice.city+ uniqueId}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
 
-                  <TableCell>
+                  <TableCell sx={{ border: '0.5px solid white'}}>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}> {basefareprice?.country} </Typography>
                   </TableCell>
                  
-                  <TableCell>
+                  <TableCell sx={{ border: '0.5px solid white'}}>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {basefareprice?.city}  </Typography>
                   </TableCell>
-                  <TableCell>
+                  <TableCell sx={{ border: '0.5px solid white'}}>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {basefareprice?.rate}  </Typography>
-                  </TableCell>
-                  <TableCell>
+                  </TableCell >
+                  <TableCell sx={{ border: '0.5px solid white'}}>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {basefareprice?.discount}  </Typography>
                   </TableCell>
-                  <TableCell>
+                  <TableCell sx={{ border: '0.5px solid white'}}>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {basefareprice?.tax}  </Typography>
                   </TableCell>
                 </TableRow>
