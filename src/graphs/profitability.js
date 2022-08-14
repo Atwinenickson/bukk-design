@@ -71,7 +71,7 @@ const ProfitabilityChart = () => {
   const barChart = (
     <Bar
       type="bar"
-      width={5} height={5}
+      width={5} height={3}
       options={options}
       data={profitabilityChartData}
       plugins={sublables}
