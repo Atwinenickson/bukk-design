@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import { Box, Drawer, Divider, useMediaQuery, Toolbar, IconButton, Typography  } from '@mui/material';
+import { Box, Drawer, Divider, useMediaQuery, Toolbar, IconButton, Typography, Stack  } from '@mui/material';
 
 
 
@@ -109,10 +109,8 @@ const items = [
           }}
         >
 
-
-<Box sx={{ p: 3 }}
-
->
+<Stack direction="row" alignItems="center" spacing={0}>
+<Box sx={{p:1, m:1}}>
             <NextLink
               href="/"
               passHref
@@ -126,8 +124,7 @@ const items = [
                 />
               </a>
             </NextLink>
-
-
+            </Box>
           
         <Box sx={{ flexGrow: 1 }}>
       <IconButton
@@ -144,7 +141,7 @@ const items = [
           </IconButton>
           </Box>
          
-          </Box>
+       </Stack>
 
 
 <Divider

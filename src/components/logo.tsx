@@ -12,20 +12,27 @@ export const Logo = styled((props: any) => {
   const color = variant === 'light' ? '#C1C4D6' : '#5048E5';
 
   return (
-
-        <Box>
-        <Typography>Change Me</Typography>
-        </Box>
+    <Box sx={{ textAlign: 'center' }}>
+    <img
+      alt="Get Bukk Logo"
+      src="/static/images/bukk.png"
+      style={{
+        display: 'inline-block',
+        maxWidth: '100%',
+        width: 30
+      }}
+    />
+  </Box>
   );
 })``;
 
-// Logo.defaultProps = {
-//   variant: 'primary'
-// };
+Logo.defaultProps = {
+  variant: 'primary'
+};
 
-// Logo.propTypes = {
-//   variant: PropTypes.oneOf(['light', 'primary'])
-// };
+Logo.propTypes = {
+  variant: PropTypes.oneOf(['light', 'primary'])
+};
 
 
 

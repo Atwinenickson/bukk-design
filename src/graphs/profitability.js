@@ -36,12 +36,37 @@ const ProfitabilityChart = () => {
             align: "end",
             anchor: "end",
             font: { size: "14" }
-          }
+          },
+          
         },
         legend: {
-          display: false
-        }
+          display: false,
+        },
+        layout: {
+          padding: {
+            bottom: 10
+          }
+      },
       };
+
+      const sublables = {
+        id: 'subLabels',
+        afterDatasetsDraw(chart, args, pluginOptions) {
+          console.log(chart)
+          const {ctx, chartArea: {left}} = chart;
+        ctx.save();
+        subLabelText('WEEK 1', width/4);
+
+
+        function subLabelText(text, x) {
+          ctx.font = 'bolder 12px sans-serif';
+          ctx.fillStyle = 'rgba(102,102,102,1)';
+          ctx.textAlign = 'center';
+          ctx.fillText(text, x + left, bottom + 40)
+        }
+        }
+        }
+      
 
   const barChart = (
     <Bar
@@ -49,6 +74,7 @@ const ProfitabilityChart = () => {
       width={5} height={5}
       options={options}
       data={profitabilityChartData}
+      plugins={sublables}
     />
   );
   return barChart;
