@@ -45,7 +45,7 @@ const ProfitabilityChart = () => {
         layout: {
           padding: {
             bottom: 10
-          }
+          },
       },
       scales: {
         x: {
@@ -53,11 +53,19 @@ const ProfitabilityChart = () => {
             title: {
                 display: true,
                 text: 'Vehicle Types'
+            },
+            grid: {
+              display: false,
+              drawBorder: false,
             }
         },
         y: {
           ticks: {
               display: false
+          },
+          grid: {
+            display: false,
+            drawBorder: false,
           }
       }
     }
@@ -89,6 +97,7 @@ const ProfitabilityChart = () => {
       options={options}
       data={profitabilityChartData}
       plugins={sublables}
+      
     />
   );
   return barChart;
