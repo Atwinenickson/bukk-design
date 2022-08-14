@@ -41,8 +41,14 @@ var options = {
          ctx.fillStyle = 'rgba(#FFFFFF)';
          ctx.fillText(text, textX, textY);
          ctx.save();
-    } 
+    },
+
+    datalabels: {
+      display: false
+    }
+    
   }]
+  
 
   return (
     < >

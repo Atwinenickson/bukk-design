@@ -45,7 +45,10 @@ const YearlyChart = () => {
         plugins: {
           legend: {
             display: false
-         }
+         },
+         datalabels: {
+            display: false
+          }
           
         },
         layout: {
