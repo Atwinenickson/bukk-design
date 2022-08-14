@@ -17,8 +17,8 @@ export const DriverDeductionsListResults = ({driverdeductions}: {driverdeduction
   return (
     <TableContainer component={Paper}>
           <Table size="small" aria-label="Driver Wallets Table">
-            <TableHead>
-              <TableRow sx={{backgroundColor:'#283593'}}>
+            <TableHead style={{ backgroundColor: '#251A40' }}>
+              <TableRow >
                 <TableCell  size='small'>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Driver</Typography>
                 </TableCell>
@@ -44,20 +44,20 @@ export const DriverDeductionsListResults = ({driverdeductions}: {driverdeduction
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
 
-                  <TableCell>
+                  <TableCell sx={{ border: '0.5px solid white'}}>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}> {driverdeduction?.driver} </Typography>
                   </TableCell>
                  
-                  <TableCell>
+                  <TableCell sx={{ border: '0.5px solid white'}}>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverdeduction?.country}  </Typography>
                   </TableCell>
-                  <TableCell>
+                  <TableCell sx={{border: '0.5px solid white'}}>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverdeduction?.city}  </Typography>
-                  </TableCell>
-                  <TableCell>
+                  </TableCell >
+                  <TableCell sx={{border: '0.5px solid white'}}>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverdeduction?.earnings}  </Typography>
                   </TableCell>
-                  <TableCell>
+                  <TableCell sx={{border: '0.5px solid white'}}>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverdeduction?.deductions}  </Typography>
                   </TableCell>
                 </TableRow>
