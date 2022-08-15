@@ -43,26 +43,26 @@ let uniqueId = Date.now().toString(36) + Math.random().toString(36).substring(2)
                 <TableRow
                   hover
                   key={driverwallet.name + uniqueId}
-              sx={{ '&:last-child td, &:last-child th': { border: 0, m:1,p:1} }}
+              sx={{ '&:last-child td, &:last-child th': { border: 0, m:1,p:1},  border: '0.5px solid #2E2957'} }
                 >
 
-                  <TableCell>
+                  <TableCell sx={{border: 'none'}}>
                   <Typography sx={{width: 2, fontSize: 6, fontWeight:600, color:'white'}}> {driverwallet?.name} </Typography>
                   </TableCell>
                  
-                  <TableCell>
+                  <TableCell sx={{border: 'none'}}>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverwallet?.earnings}  </Typography>
                   </TableCell>
-                  <TableCell>
+                  <TableCell sx={{border: 'none'}}>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverwallet?.trips}  </Typography>
                   </TableCell>
-                  <TableCell>
+                  <TableCell sx={{border: 'none'}}>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverwallet?.country}  </Typography>
                   </TableCell>
-                  <TableCell>
+                  <TableCell sx={{border: 'none'}}>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverwallet?.status}  </Typography>
                   </TableCell>
-                  <TableCell>
+                  <TableCell sx={{border: 'none'}}>
                       <Typography
                       sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}
                         color="textPrimary"
