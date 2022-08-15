@@ -19,6 +19,13 @@ const YearlyChart = () => {
           ],
          
         },
+        {
+          data: [10, 30, 70, 50, 80,30,50,60],
+          type: 'line',
+          order: 1,
+          backgroundColor:'#A85F8D',
+          borderColor:'#A85F8D'
+      },
 
         {
             data: [80, 100, 90, 90, 90,90,90,90],
@@ -28,7 +35,6 @@ const YearlyChart = () => {
             ],
            
           },
-
 
           {
             data: [70, 90, 80, 80, 80,90,90,90],
