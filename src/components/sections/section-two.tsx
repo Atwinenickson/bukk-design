@@ -22,21 +22,19 @@ import YearlyChart from '../../graphs/year-data'
 export const SectionTwoComponent = (props: any) => {
   const [open, setOpen] = useState(true);
 
-  const {wallets} = useSelector(selectWallets)
+  const { wallets } = useSelector(selectWallets)
 
   const dispatch = useDispatch<AppDispatch>();
-  
-  // useEffect(() => {
-  //     dispatch(fetchWallets())    
-  // }, [dispatch])
+
 
   useEffect(() => {
-    if (wallets.loading == false) {
-      dispatch(fetchWallets())
-    }
+    console.log('running once')
+    dispatch(fetchWallets())
   }, [])
 
-return (
+  console.log(wallets.driverwallets)
+
+  return (
     <Container
       sx={{
         display: 'flex-col',
@@ -50,7 +48,7 @@ return (
           justifyContent: 'space-between',
           // p: 1,
           // m: 1,
-          paddingTop:1,
+          paddingTop: 1,
           borderRadius: 1,
           flexGrow: 1,
           flexWrap: 'wrap',
@@ -62,7 +60,7 @@ return (
           textAlign: "center",
           fontSize: 13
         }}>Transactions</Typography>
-        <Stack  direction="row" alignItems="center" spacing={0}>
+        <Stack direction="row" alignItems="center" spacing={0}>
           <Box
             sx={{
               size: "small",
@@ -81,8 +79,8 @@ return (
             <Typography variant="subtitle2" sx={{
               color: '#b0bec5',
               textAlign: "center",
-              fontSize:10,
-              fontWeight:300
+              fontSize: 10,
+              fontWeight: 300
             }}>Daily</Typography>
           </Box>
           <Box
@@ -103,8 +101,8 @@ return (
             <Typography variant="subtitle2" sx={{
               color: '#7C7581',
               textAlign: "center",
-              fontSize:10,
-              fontWeight:300
+              fontSize: 10,
+              fontWeight: 300
             }}>Monthly</Typography>
           </Box>
           <Box
@@ -126,8 +124,8 @@ return (
             <Typography variant="subtitle2" sx={{
               color: '#cfd8dc',
               textAlign: "center",
-              fontSize:10,
-              fontWeight:300
+              fontSize: 10,
+              fontWeight: 300
             }}>Yearly</Typography>
           </Box>
         </Stack>
@@ -209,7 +207,7 @@ return (
       </Box>
 
       <Box>
-      <YearlyChart/>
+        <YearlyChart />
       </Box>
 
 
@@ -222,32 +220,32 @@ return (
           flexGrow: 1
         }}
       >
-         <Box
-        // size='small'
-        sx={{ width: 130, height:22, alignContent:"center", backgroundColor:"yellow", color:"black"}}
-      >
-      <Typography  variant="subtitle2"  sx={{
-        color: '#424242',
-        alignContent: "center",
-        marginLeft:2,
-        paddingTop:0.5,
-        fontSize:8
-      }}>
-       Generate excel sheet
-      </Typography>
-      </Box>
+        <Box
+          // size='small'
+          sx={{ width: 130, height: 22, alignContent: "center", backgroundColor: "yellow", color: "black" }}
+        >
+          <Typography variant="subtitle2" sx={{
+            color: '#424242',
+            alignContent: "center",
+            marginLeft: 2,
+            paddingTop: 0.5,
+            fontSize: 8
+          }}>
+            Generate excel sheet
+          </Typography>
+        </Box>
       </Box>
 
       <Divider
-          sx={{
-            borderColor: '#38345B',
-            my: 3
-          }}
-        />
+        sx={{
+          borderColor: '#38345B',
+          my: 3
+        }}
+      />
 
 
 
-<Box
+      <Box
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -283,38 +281,38 @@ return (
             <Typography variant="subtitle2" sx={{
               color: 'white',
               textAlign: "center",
-              fontSize:8
-            }}>See all <ArrowForwardIosIcon sx={{fontSize:8}}/>  </Typography>
+              fontSize: 8
+            }}>See all <ArrowForwardIosIcon sx={{ fontSize: 8 }} />  </Typography>
           </Box>
         </Stack>
       </Box>
 
-     
+
       <Box>
-      {wallets.loading &&   <Box sx={{ display: 'flex' }}>
-      <CircularProgress />
-    </Box>}
-      {!wallets.loading && wallets.error ?  <Box sx={{ display: 'flex' }}>
-      <Collapse in={open}>
-        <Alert   action={
-            <IconButton
-              aria-label="close"
-              color="inherit"
-              size="small"
-              onClick={() => {
-                setOpen(false);
-              }}
-            >
-              <CloseIcon fontSize="inherit" />
-            </IconButton>
-          } severity="error">{wallets.error}</Alert>
-            </Collapse>
-          </Box> : null}
-      {!wallets.loading && wallets.driverwallets.length ? (
-          <DriverWalletsListResults driverwallets={wallets.driverwallets}/>
-          
-      ) : null}
-    </Box>
+        {wallets.loading && <Box sx={{ display: 'flex' }}>
+          <CircularProgress />
+        </Box>}
+        {!wallets.loading && wallets.error ? <Box sx={{ display: 'flex' }}>
+          <Collapse in={open}>
+            <Alert action={
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                size="small"
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
+                <CloseIcon fontSize="inherit" />
+              </IconButton>
+            } severity="error">{wallets.error}</Alert>
+          </Collapse>
+        </Box> : null}
+        {!wallets.loading && wallets.driverwallets.length ? (
+          <DriverWalletsListResults driverwallets={wallets.driverwallets} />
+
+        ) : null}
+      </Box>
 
 
 
@@ -322,4 +320,5 @@ return (
 
     </Container>
 
-)};
+  )
+};

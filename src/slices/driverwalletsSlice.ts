@@ -21,7 +21,7 @@ const config = {
 
 
 export const fetchWallets = createAsyncThunk(
-'user/fetchWallets',  ()  => {
+'driver/fetchWallets',  ()  => {
     return axios
       .get( 'https://fast-dawn-89938.herokuapp.com/https://mock.bukkhl.work/v1/wallets')
       .then(response => response.data)
@@ -64,7 +64,9 @@ const driverwalletsSlice = createSlice({
     });
     builder.addCase(
       fetchWallets.fulfilled, (state, { payload }) => {
+        console.log('before reducer')
         state.driverwallets = payload;
+        console.log('after reducer')
         state.loading = false;
         state.error = ''
       });

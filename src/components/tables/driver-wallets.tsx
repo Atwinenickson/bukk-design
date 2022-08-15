@@ -39,10 +39,10 @@ let uniqueId = Date.now().toString(36) + Math.random().toString(36).substring(2)
               </TableRow>
             </TableHead>
             <TableBody sx={{backgroundColor:'rgb(54,52,116)'}}>
-              {driverwallets?.map((driverwallet: DriverWalletState) => (
+              {driverwallets?.map((driverwallet: DriverWalletState, index) => (
                 <TableRow
                   hover
-                  key={driverwallet.name + uniqueId}
+                  key={driverwallet.name + index}
               sx={{ '&:last-child td, &:last-child th': { border: 0, m:1,p:1},  border: '0.5px solid #2E2957'} }
                 >
 

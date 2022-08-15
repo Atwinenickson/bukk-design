@@ -25,7 +25,8 @@ const YearlyChart = () => {
           order: 0,
           fill:false,
           borderColor:'#A85F8D',
-          lineTension: 0.1
+          lineTension: 0.1,
+          beginAtZero: true
       },
 
         {
@@ -75,11 +76,13 @@ const YearlyChart = () => {
         },
         y: {
           ticks: {
-              display: false
+              display: false,
+              beginAtZero: true
           },
           grid: {
             drawBorder: false,
-          }
+          },
+          
       }
     }
       };
