@@ -20,11 +20,12 @@ const YearlyChart = () => {
          
         },
         {
-          data: [10, 30, 70, 50, 80,30,50,60],
+          data: [15, 60, 70, 80, 70,90,20,100],
           type: 'line',
-          order: 1,
-          backgroundColor:'#A85F8D',
-          borderColor:'#A85F8D'
+          order: 0,
+          fill:false,
+          borderColor:'#A85F8D',
+          lineTension: 0.1
       },
 
         {
