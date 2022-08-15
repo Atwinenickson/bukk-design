@@ -52,12 +52,15 @@ const ProfitabilityChart = () => {
             display: true,
             title: {
                 display: true,
-                text: 'Vehicle Types'
+                text: 'Vehicle Types',
+                color: "rgb(220,219,227)"
             },
             grid: {
               display: false,
               drawBorder: false,
-            }
+            },
+            ticks: {
+              color: "rgb(220,219,227)"}
         },
         y: {
           ticks: {

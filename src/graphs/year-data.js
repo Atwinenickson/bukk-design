@@ -51,7 +51,7 @@ const YearlyChart = () => {
       const options = {
         plugins: {
           legend: {
-            display: false
+            display: false,
          },
          datalabels: {
             display: false
@@ -69,7 +69,9 @@ const YearlyChart = () => {
             grid: {
               display: false,
               drawBorder: false,
-            }
+            },
+            ticks: {
+              color: "rgb(220,219,227)"}
         },
         y: {
           ticks: {
