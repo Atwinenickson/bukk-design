@@ -20,19 +20,19 @@ export const BaseFareListResults = ({ basefareprices }: { basefareprices: Busfar
         <TableHead>
           <TableRow sx={{ backgroundColor: '#2E2957' }}>
             <TableCell sx={{ border: '0.1px solid rgb(41,34,76)' }}>
-              <Typography sx={{ width: 2, fontSize: 6, fontWeight: 600, color: 'white' }}>Country</Typography>
+              <Typography sx={{ width: 2, fontSize: 8, fontWeight: 600, color: 'white' }}>Country</Typography>
             </TableCell>
             <TableCell sx={{ border: '0.1px solid rgb(41,34,76)' }}>
-              <Typography sx={{ width: 2, fontSize: 6, fontWeight: 600, color: 'white' }}>City</Typography>
+              <Typography sx={{ width: 2, fontSize: 8, fontWeight: 600, color: 'white' }}>City</Typography>
             </TableCell>
             <TableCell sx={{ border: '0.1px solid rgb(41,34,76)' }}>
-              <Typography sx={{ width: 2, fontSize: 6, fontWeight: 600, color: 'white' }}>Rate</Typography>
+              <Typography sx={{ width: 2, fontSize: 8, fontWeight: 600, color: 'white' }}>Rate</Typography>
             </TableCell>
             <TableCell sx={{ border: '0.1px solid rgb(41,34,76)' }}>
-              <Typography sx={{ width: 2, fontSize: 6, fontWeight: 600, color: 'white' }}>Discount</Typography>
+              <Typography sx={{ width: 2, fontSize: 8, fontWeight: 600, color: 'white' }}>Discount</Typography>
             </TableCell>
             <TableCell sx={{ border: '0.1px solid rgb(41,34,76)' }}>
-              <Typography sx={{ width: 2, fontSize: 6, fontWeight: 600, color: 'white' }}>Tax</Typography>
+              <Typography sx={{ width: 2, fontSize: 8, fontWeight: 600, color: 'white' }}>Tax</Typography>
             </TableCell>
           </TableRow>
         </TableHead>
@@ -45,20 +45,20 @@ export const BaseFareListResults = ({ basefareprices }: { basefareprices: Busfar
             >
 
               <TableCell sx={{ border: '0.1px solid rgb(41,34,76)' }}>
-                <Typography sx={{ width: 2, fontSize: 6, fontWeight: 600, color: 'white' }}> {basefareprice?.country} </Typography>
+                <Typography sx={{ width: 2, fontSize: 8, fontWeight: 600, color: 'white' }}> {basefareprice?.country} </Typography>
               </TableCell>
 
               <TableCell sx={{ border: '0.5px solid rgb(41,34,76)' }}>
-                <Typography sx={{ width: 2, fontSize: 6, fontWeight: 600, color: 'white' }}>  {basefareprice?.city}  </Typography>
+                <Typography sx={{ width: 2, fontSize: 8, fontWeight: 600, color: 'white' }}>  {basefareprice?.city}  </Typography>
               </TableCell>
               <TableCell sx={{ border: '0.5px solid rgb(41,34,76)' }}>
-                <Typography sx={{ width: 2, fontSize: 6, fontWeight: 600, color: 'white' }}>  {~~basefareprice?.rate}  </Typography>
+                <Typography sx={{ width: 2, fontSize: 8, fontWeight: 600, color: 'white' }}>  {~~basefareprice?.rate}  </Typography>
               </TableCell >
               <TableCell sx={{ border: '0.5px solid rgb(41,34,76)' }}>
-                <Typography sx={{ width: 2, fontSize: 6, fontWeight: 600, color: 'white' }}>  {~~basefareprice?.discount}  </Typography>
+                <Typography sx={{ width: 2, fontSize: 8, fontWeight: 600, color: 'white' }}>  {~~basefareprice?.discount}  </Typography>
               </TableCell>
               <TableCell sx={{ border: '0.5px solid rgb(41,34,76)' }}>
-                <Typography sx={{ width: 2, fontSize: 6, fontWeight: 600, color: 'white' }}>  {~~basefareprice?.tax}  </Typography>
+                <Typography sx={{ width: 2, fontSize: 8, fontWeight: 600, color: 'white' }}>  {~~basefareprice?.tax}  </Typography>
               </TableCell>
             </TableRow>
           ))}

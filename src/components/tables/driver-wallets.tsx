@@ -47,24 +47,24 @@ let uniqueId = Date.now().toString(36) + Math.random().toString(36).substring(2)
                 >
 
                   <TableCell sx={{border: 'none'}}>
-                  <Typography sx={{width: 2, fontSize: 6, fontWeight:600, color:'rgb(138,137,171)'}}> {driverwallet?.name} </Typography>
+                  <Typography sx={{width: 2, fontSize: 8, fontWeight:600, color:'rgb(207,208,227)'}}> {driverwallet?.name} </Typography>
                   </TableCell>
                  
                   <TableCell sx={{border: 'none'}}>
-                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(138,137,171)'}}>  {driverwallet?.earnings}  </Typography>
+                  <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'rgb(207,208,227)'}}>  {driverwallet?.earnings}  </Typography>
                   </TableCell>
                   <TableCell sx={{border: 'none'}}>
-                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(138,137,171)'}}>  {driverwallet?.trips}  </Typography>
+                  <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'rgb(207,208,227)'}}>  {driverwallet?.trips}  </Typography>
                   </TableCell>
                   <TableCell sx={{border: 'none'}}>
-                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(138,137,171)'}}>  {driverwallet?.country}  </Typography>
+                  <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'rgb(207,208,227)'}}>  {driverwallet?.country}  </Typography>
                   </TableCell>
                   <TableCell sx={{border: 'none'}}>
-                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(138,137,171)'}}>  {driverwallet?.status}  </Typography>
+                  <Typography sx={{width: 2, fontSize:8, fontWeight:600, color:'rgb(207,208,227)'}}>  {driverwallet?.status}  </Typography>
                   </TableCell>
                   <TableCell sx={{border: 'none'}}>
                       <Typography
-                      sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(138,137,171)'}}
+                      sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(207,208,227)'}}
                         color="textPrimary"
                         variant="body1"
                       >
