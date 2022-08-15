@@ -47,7 +47,7 @@ export const NavItem = (props: any) => {
             }
           }}
         >
-          <Box sx={{ flexGrow: 1 }}>
+          <Box sx={{ flexGrow: 1, fontSize:'12px'}}>
             {title}
           </Box>
         </Button>

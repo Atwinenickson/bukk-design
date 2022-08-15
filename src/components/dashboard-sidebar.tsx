@@ -19,6 +19,7 @@ import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import { NavItem } from './nav-item';
 import { Logo } from './logo';
@@ -164,12 +165,19 @@ const items = [
 
           <Box sx={{ flexGrow: 1 }}>
             {items.map((item) => (
+               <Stack  direction="row" spacing={0}>
+                <Box sx={{width:'80%'}}>
               <NavItem
                 key={item.title}
                 icon={item.icon}
                 href={item.href}
                 title={item.title}
               />
+              </Box>
+              <Box sx={{ marginLeft:'15px'}}>
+              <ArrowForwardIosIcon sx={{fontSize:'15px', fontWeight:'600px'}}/>
+              </Box>
+                </Stack>
             ))}
           </Box>
         </Box>
