@@ -17,7 +17,7 @@ export interface Driverdeductionstate {
 export const fetchDeductions = createAsyncThunk(
 'user/fetchDeductions',  ()  => {
     return axios
-      .get('https://cors-anywhere.herokuapp.com/' + 'https://mock.bukkhl.work/v1/driver-transactions')
+      .get('https://fast-dawn-89938.herokuapp.com/https://mock.bukkhl.work/v1/driver-transactions',   {withCredentials: false},)
       .then(response => response.data)
   })
 

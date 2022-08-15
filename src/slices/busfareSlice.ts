@@ -16,7 +16,7 @@ export interface Busfarestate {
 export const fetchBusFares = createAsyncThunk(
 'user/fetchBusFares',  ()  => {
     return axios
-      .get('https://cors-anywhere.herokuapp.com/' + 'https://mock.bukkhl.work/v1/fare-prices')
+      .get('https://fast-dawn-89938.herokuapp.com/https://mock.bukkhl.work/v1/fare-prices')
       .then(response => response.data)
   })
 

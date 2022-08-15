@@ -11,21 +11,19 @@ export interface DriverWalletState {
   status: string;
 }
 
-const config = {
-  headers:{
-    accept: '*/*',
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': '*',
-    'Access-Control-Allow-Headers': '*'
-  }
+const config = {  
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Content-type": "application/json",
+    },
+    mode: "no-cors",
 };
 
 
 export const fetchWallets = createAsyncThunk(
 'user/fetchWallets',  ()  => {
     return axios
-      .get( 'https://jsonplaceholder.typicode.com/users',config)
+      .get( 'https://fast-dawn-89938.herokuapp.com/https://mock.bukkhl.work/v1/wallets')
       .then(response => response.data)
 
 //     const url = "https://mock.bukkhl.work/v1/wallets";

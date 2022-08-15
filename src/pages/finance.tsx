@@ -6,9 +6,6 @@ import { DashboardLayout } from '../components/dashboard-layout';
 import { SectionOneComponent } from '../components/sections/section-one';
 import { SectionTwoComponent } from '../components/sections/section-two';
 import { SectionThreeComponent } from '../components/sections/section-three';
-import { fetchWallets, selectWallets } from '../slices/driverwalletsSlice';
-import { AppDispatch } from '../store';
-import { useSelector, useDispatch } from 'react-redux';
 
 
 
@@ -27,7 +24,6 @@ return (
       component="main"
       sx={{
         flexGrow: 1,
-        py: 8,
         backgroundColor: '#251A40',
         width:'100%',
         height: '100%'

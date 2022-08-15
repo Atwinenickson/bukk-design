@@ -26,9 +26,9 @@ import ProfitabilityChart from '../../graphs/profitability'
   
     
     useEffect(() => {
-        dispatch(fetchDeductions())  
-        dispatch(fetchBusFares())    
-    }, [dispatch])
+        dispatch(fetchDeductions()) 
+        dispatch(fetchBusFares())  
+    }, [])
   
   return(
     <>
