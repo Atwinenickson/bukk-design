@@ -275,7 +275,7 @@ return (
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              bgcolor: "#5B4D48",
+              bgcolor: "#251A40",
               flexGrow: 1
             }}
           >

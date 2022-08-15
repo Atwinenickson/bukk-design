@@ -57,7 +57,7 @@ import ProfitabilityChart from '../../graphs/profitability'
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              bgcolor: "#5B4D48"
+              bgcolor: "#251A40"
             }}
           >
             <Typography variant="subtitle2" sx={{
