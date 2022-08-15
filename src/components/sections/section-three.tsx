@@ -26,8 +26,12 @@ import ProfitabilityChart from '../../graphs/profitability'
   
     
     useEffect(() => {
+      if (driverdeductions.loading == false) {
         dispatch(fetchDeductions()) 
+      }
+      if (busfares.loading == false) {
         dispatch(fetchBusFares())  
+      }
     }, [])
   
   return(

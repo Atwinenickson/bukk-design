@@ -31,10 +31,10 @@ export const SectionTwoComponent = (props: any) => {
   // }, [dispatch])
 
   useEffect(() => {
-    // if (wallets.loading === 'idle') {
+    if (wallets.loading == false) {
       dispatch(fetchWallets())
-    // }
-  }, [dispatch])
+    }
+  }, [])
 
 return (
     <Container
