@@ -45,7 +45,7 @@ export const DriverDeductionsListResults = ({driverdeductions}: {driverdeduction
                 >
 
                   <TableCell sx={{ border: '0.1px solid rgb(41,34,76)'}}>
-                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}> {driverdeduction?.driver} </Typography>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}> {~~driverdeduction?.driver} </Typography>
                   </TableCell>
                  
                   <TableCell sx={{ border: '0.1px solid rgb(41,34,76)'}}>
@@ -55,10 +55,10 @@ export const DriverDeductionsListResults = ({driverdeductions}: {driverdeduction
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverdeduction?.city}  </Typography>
                   </TableCell >
                   <TableCell sx={{ border: '0.1px solid rgb(41,34,76)'}}>
-                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverdeduction?.earnings}  </Typography>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {~~driverdeduction?.earnings}  </Typography>
                   </TableCell>
                   <TableCell sx={{ border: '0.1px solid rgb(41,34,76)'}}>
-                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverdeduction?.deductions}  </Typography>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {~~driverdeduction?.deductions}  </Typography>
                   </TableCell>
                 </TableRow>
               ))}

@@ -52,13 +52,13 @@ export const BaseFareListResults = ({basefareprices}: {basefareprices: Busfarest
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {basefareprice?.city}  </Typography>
                   </TableCell>
                   <TableCell sx={{ border: '0.5px solid rgb(41,34,76)'}}>
-                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {basefareprice?.rate}  </Typography>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {~~basefareprice?.rate}  </Typography>
                   </TableCell >
                   <TableCell sx={{ border: '0.5px solid rgb(41,34,76)'}}>
-                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {basefareprice?.discount}  </Typography>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {~~basefareprice?.discount}  </Typography>
                   </TableCell>
                   <TableCell sx={{ border: '0.5px solid rgb(41,34,76)'}}>
-                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {basefareprice?.tax}  </Typography>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {~~basefareprice?.tax}  </Typography>
                   </TableCell>
                 </TableRow>
               ))}
