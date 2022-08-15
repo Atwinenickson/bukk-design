@@ -44,7 +44,7 @@ export const BaseFareListResults = ({basefareprices}: {basefareprices: Busfarest
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
 
-                  <TableCell sx={{ border: '0.5px solid white'}}>
+                  <TableCell sx={{ border: '0.1px solid black'}}>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}> {basefareprice?.country} </Typography>
                   </TableCell>
                  

@@ -17,8 +17,8 @@ let uniqueId = Date.now().toString(36) + Math.random().toString(36).substring(2)
     <TableContainer component={Paper}>
           <Table size="small" aria-label="Driver Wallets Table">
             <TableHead>
-              <TableRow sx={{backgroundColor:'#283593'}}>
-                <TableCell  size='small'>
+              <TableRow sx={{backgroundColor:'#283593', height:'1px'}}>
+                <TableCell>
                   <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Name</Typography>
                 </TableCell>
                 <TableCell>

@@ -18,7 +18,7 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
-import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
+import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 
 import { NavItem } from './nav-item';
 import { Logo } from './logo';
@@ -136,7 +136,7 @@ const items = [
             }}>eBUKK</Typography>
           </Box>
           
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1, marginLeft:6 }}>
       <IconButton
             onClick={onClose}
             sx={{
@@ -144,10 +144,10 @@ const items = [
                 xs: 'none',
                 lg: 'inline-flex'
               },
-              color: 'white'
+              color: 'blue'
             }}
           >
-            <DoubleArrowIcon fontSize="small" />
+            <KeyboardDoubleArrowLeftIcon fontSize="small" />
           </IconButton>
           </Box>
          
