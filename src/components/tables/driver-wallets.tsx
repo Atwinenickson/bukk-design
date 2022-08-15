@@ -17,28 +17,28 @@ let uniqueId = Date.now().toString(36) + Math.random().toString(36).substring(2)
     <TableContainer component={Paper}>
           <Table size="small" aria-label="Driver Wallets Table">
             <TableHead>
-              <TableRow sx={{backgroundColor:'#283593', height:'1px'}}>
+              <TableRow sx={{backgroundColor:'rgb(65,68,155)', height:'1px'}}>
                 <TableCell>
-                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Name</Typography>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(207,208,227)'}}>Name</Typography>
                 </TableCell>
                 <TableCell>
-                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Earnings</Typography>
+                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(207,208,227)'}}>Earnings</Typography>
                 </TableCell>
                 <TableCell>
-                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Trips</Typography>
+                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(207,208,227)'}}>Trips</Typography>
                 </TableCell>
                 <TableCell>
-                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Country</Typography>
+                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(207,208,227)'}}>Country</Typography>
                 </TableCell>
                 <TableCell>
-                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Status</Typography>
+                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(207,208,227)'}}>Status</Typography>
                 </TableCell>
                 <TableCell>
-                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>Take Action</Typography>
+                <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(207,208,227)'}}>Take Action</Typography>
                 </TableCell>
               </TableRow>
             </TableHead>
-            <TableBody sx={{backgroundColor:'#1565c0'}}>
+            <TableBody sx={{backgroundColor:'rgb(54,52,116)'}}>
               {driverwallets?.map((driverwallet: DriverWalletState) => (
                 <TableRow
                   hover
@@ -47,24 +47,24 @@ let uniqueId = Date.now().toString(36) + Math.random().toString(36).substring(2)
                 >
 
                   <TableCell sx={{border: 'none'}}>
-                  <Typography sx={{width: 2, fontSize: 6, fontWeight:600, color:'white'}}> {driverwallet?.name} </Typography>
+                  <Typography sx={{width: 2, fontSize: 6, fontWeight:600, color:'rgb(138,137,171)'}}> {driverwallet?.name} </Typography>
                   </TableCell>
                  
                   <TableCell sx={{border: 'none'}}>
-                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverwallet?.earnings}  </Typography>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(138,137,171)'}}>  {driverwallet?.earnings}  </Typography>
                   </TableCell>
                   <TableCell sx={{border: 'none'}}>
-                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverwallet?.trips}  </Typography>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(138,137,171)'}}>  {driverwallet?.trips}  </Typography>
                   </TableCell>
                   <TableCell sx={{border: 'none'}}>
-                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverwallet?.country}  </Typography>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(138,137,171)'}}>  {driverwallet?.country}  </Typography>
                   </TableCell>
                   <TableCell sx={{border: 'none'}}>
-                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}>  {driverwallet?.status}  </Typography>
+                  <Typography sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(138,137,171)'}}>  {driverwallet?.status}  </Typography>
                   </TableCell>
                   <TableCell sx={{border: 'none'}}>
                       <Typography
-                      sx={{width: 2, fontSize:6, fontWeight:600, color:'white'}}
+                      sx={{width: 2, fontSize:6, fontWeight:600, color:'rgb(138,137,171)'}}
                         color="textPrimary"
                         variant="body1"
                       >

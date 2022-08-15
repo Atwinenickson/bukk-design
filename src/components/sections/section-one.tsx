@@ -25,7 +25,7 @@ export const SectionOneComponent = (props: any) => (
         alignItems: 'center',
         p: 1,
         m: 1,
-        bgcolor: '#283593',
+        bgcolor: 'rgb(65,68,155)',
         width: '90%',
         height: '14%',
         flexGrow: 1
@@ -45,7 +45,7 @@ export const SectionOneComponent = (props: any) => (
         alignItems: 'center',
         p: 1,
         m: 1,
-        bgcolor: '#283593',
+        bgcolor: 'rgb(65,68,155)',
         width: '90%',
         height: '24%',
         flexGrow: 1
@@ -67,7 +67,7 @@ export const SectionOneComponent = (props: any) => (
         alignItems: 'center',
         p: 1,
         m: 1,
-        bgcolor: '#283593',
+        bgcolor: 'rgb(65,68,155)',
         width: '90%',
         height: '24%',
         flexGrow: 1
@@ -109,7 +109,7 @@ export const SectionOneComponent = (props: any) => (
         alignItems: 'center',
         p: 1,
         m: 1,
-        bgcolor: '#283593',
+        bgcolor: 'rgb(65,68,155)',
         width: '90%',
         height: '24%',
         flexGrow: 1
@@ -171,7 +171,7 @@ export const SectionOneComponent = (props: any) => (
         alignItems: 'center',
         p: 1,
         m: 1,
-        bgcolor: '#283593',
+        bgcolor: 'rgb(65,68,155)',
         width: '90%',
         height: '14%',
         flexGrow: 1

@@ -222,19 +222,20 @@ return (
           flexGrow: 1
         }}
       >
-         <Button
-        size='small'
+         <Box
+        // size='small'
         sx={{ width: 130, height:22, alignContent:"center", backgroundColor:"yellow", color:"black"}}
       >
       <Typography  variant="subtitle2"  sx={{
         color: '#424242',
-        align: "center",
-        m:1,
+        alignContent: "center",
+        marginLeft:2,
+        paddingTop:0.5,
         fontSize:8
       }}>
        Generate excel sheet
       </Typography>
-      </Button>
+      </Box>
       </Box>
 
       <Divider
@@ -275,7 +276,7 @@ return (
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              bgcolor: "#5B4D48",
+              bgcolor: "rgb(37,26,64)",
               flexGrow: 1
             }}
           >

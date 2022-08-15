@@ -57,7 +57,7 @@ import ProfitabilityChart from '../../graphs/profitability'
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              bgcolor: "#251A40"
+              bgcolor: "rgb(37,26,64)"
             }}
           >
             <Typography variant="subtitle2" sx={{
@@ -138,7 +138,7 @@ import ProfitabilityChart from '../../graphs/profitability'
       >
 
         <Typography variant="h6" sx={{
-          color: 'white',
+          color: 'rgb(247,247,248)',
           textAlign: "center",
           fontSize: 13
         }}>Driver Deductions</Typography>
@@ -154,7 +154,7 @@ import ProfitabilityChart from '../../graphs/profitability'
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              bgcolor: "#251A40"
+              bgcolor: "rgb(37,26,64)"
             }}
           >
             <Typography variant="subtitle2" sx={{
