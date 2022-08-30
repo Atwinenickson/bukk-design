@@ -6,9 +6,15 @@ This application has been designed to show summary for finace transactions on th
 ```bash 
 git clone https://github.com/Atwinenickson/bukk-design.git
 ```
+
+```bash
+cd bukk-design
+```
+
 ```bash
 yarn
 ```
+
 ```bash 
 yarn dev
 ```
@@ -17,6 +23,7 @@ yarn dev
 ```bash 
 docker build --no-cache -t getbukkapp .
 ```
+
 ```bash
 docker run getbukkapp
 ```
